@@ -1,0 +1,1776 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>概念整合</title><link href='file://night/mermaid.dark.css' rel='stylesheet' type='text/css' /><link href='file://night/codeblock.dark.css' rel='stylesheet' type='text/css' /><link href='file://night/sourcemode.dark.css' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+/* Flowchart variables */
+/* Sequence Diagram variables */
+/* Gantt chart variables */
+/* state colors */
+.label {
+  
+  color: #333; }
+
+.label text {
+  fill: #333; }
+
+.node rect,
+.node circle,
+.node ellipse,
+.node polygon {
+  fill: #BDD5EA;
+  stroke: #9370DB;
+  stroke-width: 1px; }
+
+.node .label {
+  text-align: center; }
+
+.node.clickable {
+  cursor: pointer; }
+
+.arrowheadPath {
+  fill: lightgrey; }
+
+.edgePath .path {
+  stroke: lightgrey;
+  stroke-width: 1.5px; }
+
+.edgeLabel {
+  background-color: #e8e8e8;
+  text-align: center; }
+
+.cluster rect {
+  fill: #6D6D65;
+  stroke: rgba(255, 255, 255, 0.25);
+  stroke-width: 1px; }
+
+.cluster text {
+  fill: #F9FFFE; }
+
+div.mermaidTooltip {
+  position: absolute;
+  text-align: center;
+  max-width: 200px;
+  padding: 2px;
+  
+  font-size: 12px;
+  background: #6D6D65;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 100; }
+
+.actor {
+  stroke: #81B1DB;
+  fill: #BDD5EA; }
+
+text.actor {
+  fill: black;
+  stroke: none; }
+
+.actor-line {
+  stroke: lightgrey; }
+
+.messageLine0 {
+  stroke-width: 1.5;
+  stroke-dasharray: '2 2';
+  stroke: lightgrey; }
+
+.messageLine1 {
+  stroke-width: 1.5;
+  stroke-dasharray: '2 2';
+  stroke: lightgrey; }
+
+#arrowhead {
+  fill: lightgrey; }
+
+.sequenceNumber {
+  fill: white; }
+
+#sequencenumber {
+  fill: lightgrey; }
+
+#crosshead path {
+  fill: lightgrey !important;
+  stroke: lightgrey !important; }
+
+.messageText {
+  fill: lightgrey;
+  stroke: none; }
+
+.labelBox {
+  stroke: #81B1DB;
+  fill: #BDD5EA; }
+
+.labelText {
+  fill: #323D47;
+  stroke: none; }
+
+.loopText {
+  fill: lightgrey;
+  stroke: none; }
+
+.loopLine {
+  stroke-width: 2;
+  stroke-dasharray: '2 2';
+  stroke: #81B1DB; }
+
+.note {
+  stroke: rgba(255, 255, 255, 0.25);
+  fill: #fff5ad; }
+
+.noteText {
+  fill: black;
+  stroke: none;
+  
+  font-size: 14px; }
+
+.activation0 {
+  fill: #f4f4f4;
+  stroke: #666; }
+
+.activation1 {
+  fill: #f4f4f4;
+  stroke: #666; }
+
+.activation2 {
+  fill: #f4f4f4;
+  stroke: #666; }
+
+/** Section styling */
+.section {
+  stroke: none;
+  opacity: 0.2; }
+
+.section0 {
+  fill: rgba(255, 255, 255, 0.3); }
+
+.section2 {
+  fill: #EAE8B9; }
+
+.section1,
+.section3 {
+  fill: white;
+  opacity: 0.2; }
+
+.sectionTitle0 {
+  fill: #F9FFFE; }
+
+.sectionTitle1 {
+  fill: #F9FFFE; }
+
+.sectionTitle2 {
+  fill: #F9FFFE; }
+
+.sectionTitle3 {
+  fill: #F9FFFE; }
+
+.sectionTitle {
+  text-anchor: start;
+  font-size: 11px;
+  text-height: 14px;
+   }
+
+/* Grid and axis */
+.grid .tick {
+  stroke: lightgrey;
+  opacity: 0.3;
+  shape-rendering: crispEdges; }
+
+.grid path {
+  stroke-width: 0; }
+
+/* Today line */
+.today {
+  fill: none;
+  stroke: #DB5757;
+  stroke-width: 2px; }
+
+/* Task styling */
+/* Default task */
+.task {
+  stroke-width: 2; }
+
+.taskText {
+  text-anchor: middle;
+   }
+
+.taskText:not([font-size]) {
+  font-size: 11px; }
+
+.taskTextOutsideRight {
+  fill: #323D47;
+  text-anchor: start;
+  font-size: 11px;
+   }
+
+.taskTextOutsideLeft {
+  fill: #323D47;
+  text-anchor: end;
+  font-size: 11px; }
+
+/* Special case clickable */
+.task.clickable {
+  cursor: pointer; }
+
+.taskText.clickable {
+  cursor: pointer;
+  fill: #003163 !important;
+  font-weight: bold; }
+
+.taskTextOutsideLeft.clickable {
+  cursor: pointer;
+  fill: #003163 !important;
+  font-weight: bold; }
+
+.taskTextOutsideRight.clickable {
+  cursor: pointer;
+  fill: #003163 !important;
+  font-weight: bold; }
+
+/* Specific task settings for the sections*/
+.taskText0,
+.taskText1,
+.taskText2,
+.taskText3 {
+  fill: #323D47; }
+
+.task0,
+.task1,
+.task2,
+.task3 {
+  fill: #BDD5EA;
+  stroke: rgba(255, 255, 255, 0.5); }
+
+.taskTextOutside0,
+.taskTextOutside2 {
+  fill: lightgrey; }
+
+.taskTextOutside1,
+.taskTextOutside3 {
+  fill: lightgrey; }
+
+/* Active task */
+.active0,
+.active1,
+.active2,
+.active3 {
+  fill: #81B1DB;
+  stroke: rgba(255, 255, 255, 0.5); }
+
+.activeText0,
+.activeText1,
+.activeText2,
+.activeText3 {
+  fill: #323D47 !important; }
+
+/* Completed task */
+.done0,
+.done1,
+.done2,
+.done3 {
+  stroke: grey;
+  fill: lightgrey;
+  stroke-width: 2; }
+
+.doneText0,
+.doneText1,
+.doneText2,
+.doneText3 {
+  fill: #323D47 !important; }
+
+/* Tasks on the critical line */
+.crit0,
+.crit1,
+.crit2,
+.crit3 {
+  stroke: #E83737;
+  fill: #E83737;
+  stroke-width: 2; }
+
+.activeCrit0,
+.activeCrit1,
+.activeCrit2,
+.activeCrit3 {
+  stroke: #E83737;
+  fill: #81B1DB;
+  stroke-width: 2; }
+
+.doneCrit0,
+.doneCrit1,
+.doneCrit2,
+.doneCrit3 {
+  stroke: #E83737;
+  fill: lightgrey;
+  stroke-width: 2;
+  cursor: pointer;
+  shape-rendering: crispEdges; }
+
+.milestone {
+  transform: rotate(45deg) scale(0.8, 0.8); }
+
+.milestoneText {
+  font-style: italic; }
+
+.doneCritText0,
+.doneCritText1,
+.doneCritText2,
+.doneCritText3 {
+  fill: #323D47 !important; }
+
+.activeCritText0,
+.activeCritText1,
+.activeCritText2,
+.activeCritText3 {
+  fill: #323D47 !important; }
+
+.titleText {
+  text-anchor: middle;
+  font-size: 18px;
+  fill: #323D47;
+   }
+
+g.classGroup text {
+  fill: #9370DB;
+  stroke: none;
+  
+  font-size: 10px; }
+  g.classGroup text .title {
+    font-weight: bolder; }
+
+g.classGroup rect {
+  fill: #BDD5EA;
+  stroke: #9370DB; }
+
+g.classGroup line {
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+.classLabel .box {
+  stroke: none;
+  stroke-width: 0;
+  fill: #BDD5EA;
+  opacity: 0.5; }
+
+.classLabel .label {
+  fill: #9370DB;
+  font-size: 10px; }
+
+.relation {
+  stroke: #9370DB;
+  stroke-width: 1;
+  fill: none; }
+
+#compositionStart {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#compositionEnd {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#aggregationStart {
+  fill: #BDD5EA;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#aggregationEnd {
+  fill: #BDD5EA;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#dependencyStart {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#dependencyEnd {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#extensionStart {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#extensionEnd {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+.commit-id,
+.commit-msg,
+.branch-label {
+  fill: lightgrey;
+  color: lightgrey;
+   }
+
+.pieTitleText {
+  text-anchor: middle;
+  font-size: 25px;
+  fill: #323D47;
+   }
+
+.slice {
+   }
+
+g.stateGroup text {
+  fill: #eee;
+  stroke: none;
+  font-size: 10px;
+   }
+
+g.stateGroup circle {
+  fill: white !important;
+  stroke: white !important;
+}
+
+g.stateGroup .state-title {
+  font-weight: bolder;
+  fill: black; }
+
+g.stateGroup rect {
+  fill: #ececff;
+  stroke: #9370DB; }
+
+g.stateGroup line {
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+.transition {
+  stroke: #9370DB;
+  stroke-width: 1;
+  fill: none; }
+
+.stateGroup .composit {
+  fill: #555;
+  border-bottom: 1px; }
+
+.state-note {
+  stroke: rgba(255, 255, 255, 0.25);
+  fill: #fff5ad; }
+  .state-note text {
+    fill: black;
+    stroke: none;
+    font-size: 10px; }
+
+.stateLabel .box {
+  stroke: none;
+  stroke-width: 0;
+  fill: #BDD5EA;
+  opacity: 0.5; }
+
+.stateLabel text {
+  fill: black;
+  font-size: 10px;
+  font-weight: bold;
+   }
+
+;
+/* CSS Document */
+
+/** code highlight */
+
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-operator,
+.cm-s-inner .cm-property {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-keyword {
+    color: #C88FD0;
+}
+
+.cm-s-inner .cm-tag {
+    color: #7DF46A;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #7575E4;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 1px solid #b8bfc6;
+    z-index: 3;
+}
+
+.cm-s-inner .cm-string {
+    color: #D26B6B;
+}
+
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment {
+    color: #DA924A;
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner .cm-def,
+.cm-s-inner.cm-header,
+.cm-s-inner.cm-def {
+    color: #8d8df0;
+}
+
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote {
+    color: #57ac57;
+}
+
+.cm-s-inner .cm-hr {
+    color: #d8d5d5;
+}
+
+.cm-s-inner .cm-link {
+    color: #d3d3ef;
+}
+
+.cm-s-inner .cm-negative {
+    color: #d95050;
+}
+
+.cm-s-inner .cm-positive {
+    color: #50e650;
+}
+
+.cm-s-inner .cm-string-2 {
+    color: #f50;
+}
+
+.cm-s-inner .cm-meta,
+.cm-s-inner .cm-qualifier {
+    color: #b7b3b3;
+}
+
+.cm-s-inner .cm-builtin {
+    color: #f3b3f8;
+}
+
+.cm-s-inner .cm-bracket {
+    color: #997;
+}
+
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom {
+    color: #84B6CB;
+}
+
+.cm-s-inner .cm-number {
+    color: #64AB8F;
+}
+
+.cm-s-inner .cm-variable {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #9FBAD5;
+}
+
+.cm-s-inner .cm-variable-3 {
+    color: #1cc685;
+}
+
+.CodeMirror-selectedtext,
+.CodeMirror-selected {
+    background: #4a89dc;
+    color: #fff !important;
+    text-shadow: none;
+}
+
+.CodeMirror-gutters {
+    border-right: none;
+}
+;
+/* CSS Document */
+
+/** markdown source **/
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property
+{
+    color: #cebcca;
+}
+
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor{
+    border-left: 3px solid #b8bfc6;
+}
+
+.cm-s-typora-default .cm-comment {
+    color: #9FB1FF;
+}
+
+.cm-s-typora-default .cm-string {
+    color: #A7A7D9
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+    color: #848695;
+    font-style: italic;
+}
+
+.cm-s-typora-default .cm-link {
+    color: #95B94B;
+}
+
+.cm-s-typora-default .CodeMirror-activeline-background {
+    background: rgba(51, 51, 51, 0.72);
+}
+
+.cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code {
+	color: #8aa1e1;
+}@import "";
+@import "";
+@import "";
+
+:root {
+    --bg-color:  #363B40;
+    --side-bar-bg-color: #2E3033;
+    --text-color: #b8bfc6;
+
+    --select-text-bg-color:#4a89dc;
+
+    --item-hover-bg-color: #0a0d16;
+    --control-text-color: #b7b7b7;
+    --control-text-hover-color: #eee;
+    --window-border: 1px solid #555;
+
+    --active-file-bg-color: rgb(34, 34, 34);
+    --active-file-border-color: #8d8df0;
+
+    --primary-color: #a3d5fe;
+
+    --active-file-text-color: white;
+    --item-hover-bg-color: #70717d;
+    --item-hover-text-color: white;
+    --primary-color: #6dc1e7;
+
+    --rawblock-edit-panel-bd: #333;
+
+    --search-select-bg-color: #428bca;
+}
+
+html {
+    font-size: 16px;
+}
+
+html,
+body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background: #363B40;
+    background: var(--bg-color);
+    fill: currentColor;
+    line-height: 1.625rem;
+}
+
+#write {
+    max-width: 914px;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea,
+div.code-tooltip-content {
+    color: #b8bfc6;
+    border-color: transparent;
+}
+
+div.code-tooltip,
+.md-hover-tip .md-arrow:after {
+    background: #333;
+}
+
+.popover.bottom > .arrow:after {
+    border-bottom-color: #333;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+hr {
+    height: 2px;
+    border: 0;
+    margin: 24px 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lucida Grande", "Corbel", sans-serif;
+    font-weight: normal;
+    clear: both;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    color: #DEDEDE
+}
+
+h1 {
+    font-size: 2.5rem;
+    /* 36px */
+    line-height: 2.75rem;
+    /* 40px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    font-size: 1.63rem;
+    /* 24px */
+    line-height: 1.875rem;
+    /* 30px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.17rem;
+    /* 18px */
+    line-height: 1.5rem;
+    /* 24px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.12rem;
+    /* 16px */
+    line-height: 1.375rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    color: white;
+}
+
+h5 {
+    font-size: 0.97rem;
+    /* 16px */
+    line-height: 1.25rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 0.93rem;
+    /* 16px */
+    line-height: 1rem;
+    /* 16px */
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+@media (min-width: 980px) {
+    h3.md-focus:before,
+    h4.md-focus:before,
+    h5.md-focus:before,
+    h6.md-focus:before {
+        color: #ddd;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        position: absolute;
+        left: -1.642857143rem;
+        top: .357142857rem;
+        float: left;
+        font-size: 9px;
+        padding-left: 2px;
+        padding-right: 2px;
+        vertical-align: bottom;
+        font-weight: normal;
+        line-height: normal;
+    }
+
+    h3.md-focus:before {
+        content: 'h3';
+    }
+
+    h4.md-focus:before {
+        content: 'h4';
+    }
+
+    h5.md-focus:before {
+        content: 'h5';
+        top: 0px;
+    }
+
+    h6.md-focus:before {
+        content: 'h6';
+        top: 0px;
+    }
+}
+
+a {
+    text-decoration: none;
+    outline: 0;
+}
+
+a:hover {
+    outline: 0;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+sup.md-footnote {
+    background-color: #555;
+    color: #ddd;
+}
+
+p {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+p,
+ul,
+dd,
+ol,
+hr,
+address,
+pre,
+table,
+iframe,
+.wp-caption,
+.wp-audio-shortcode,
+.wp-video-shortcode {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    /* 24px */
+}
+
+li > blockquote {
+	margin-bottom: 0;
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+::-moz-selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+*.in-text-selection,
+::selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+ul,
+ol {
+    padding: 0 0 0 1.875rem;
+    /* 30px */
+}
+
+ul {
+    list-style: square;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    margin: 0;
+}
+
+b,
+th,
+dt,
+strong {
+    font-weight: bold;
+}
+
+i,
+em,
+dfn,
+cite {
+    font-style: italic;
+}
+
+blockquote {
+    padding-left: 1.875rem;
+    margin: 0 0 1.875rem 1.875rem;
+    border-left: solid 2px #474d54;
+    padding-left: 30px;
+    margin-top: 35px;
+}
+
+pre,
+code,
+kbd,
+tt,
+var {
+    background: rgba(0, 0, 0, 0.05);
+    font-size: 0.875rem;
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+kbd {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #fff;
+    background-color: #333;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+}
+
+pre.md-fences {
+    padding: 10px 10px 10px 30px;
+    margin-bottom: 20px;
+    background: #333;
+}
+
+.CodeMirror-gutters {
+    background: #333;
+    border-right: 1px solid transparent;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -2.2em;
+    right: 4px;
+}
+
+code,
+kbd,
+tt,
+var {
+    padding: 2px 5px;
+}
+
+table {
+    max-width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 5px 10px;
+    vertical-align: top;
+}
+
+a {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+hr {
+    background: #474d54;
+    /* variable */
+}
+
+h1 {
+    margin-top: 2em;
+}
+
+a {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.md-inline-math script {
+    color: #81b1db;
+}
+
+b,
+th,
+dt,
+strong {
+    color: #DEDEDE;
+    /* variable */
+}
+
+mark {
+    background: #D3D40E;
+}
+
+blockquote {
+    color: #9DA2A6;
+}
+
+table a {
+    color: #DEDEDE;
+    /* variable */
+}
+
+th,
+td {
+    border: solid 1px #474d54;
+    /* variable */
+}
+
+.task-list {
+    padding-left: 0;
+}
+
+.md-task-list-item {
+    padding-left: 1.25rem;
+}
+
+.md-task-list-item > input {
+    top: auto;
+}
+
+.md-task-list-item > input:before {
+    content: "";
+    display: inline-block;
+    width: 0.875rem;
+    height: 0.875rem;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #b8bfc6;
+    background-color: #363B40;
+    margin-top: -0.4rem;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before {
+    content: '\221A';
+    /*◘*/
+    font-size: 0.625rem;
+    line-height: 0.625rem;
+    color: #DEDEDE;
+}
+
+/** quick open **/
+.auto-suggest-container {
+    border: 0px;
+    background-color: #525C65;
+}
+
+#typora-quick-open {
+    background-color: #525C65;
+}
+
+#typora-quick-open input{
+    background-color: #525C65;
+    border: 0;
+    border-bottom: 1px solid grey;
+}
+
+.typora-quick-open-item {
+    background-color: inherit;
+    color: inherit;
+}
+
+.typora-quick-open-item.active,
+.typora-quick-open-item:hover {
+    background-color: #4D8BDB;
+    color: white;
+}
+
+.typora-quick-open-item:hover {
+    background-color: rgba(77, 139, 219, 0.8);
+}
+
+.typora-search-spinner > div {
+  background-color: #fff;
+}
+
+#write pre.md-meta-block {
+    border-bottom: 1px dashed #ccc;
+    background: transparent;
+    padding-bottom: 0.6em;
+    line-height: 1.6em;
+}
+
+.btn,
+.btn .btn-default {
+    background: transparent;
+    color: #b8bfc6;
+}
+
+.ty-table-edit {
+    border-top: 1px solid gray;
+    background-color: #363B40;
+}
+
+.popover-title {
+    background: transparent;
+}
+
+.md-image>.md-meta {
+    color: #BBBBBB;
+    background: transparent;
+}
+
+.md-expand.md-image>.md-meta {
+    color: #DDD;
+}
+
+#write>h3:before,
+#write>h4:before,
+#write>h5:before,
+#write>h6:before {
+    border: none;
+    border-radius: 0px;
+    color: #888;
+    text-decoration: underline;
+    left: -1.4rem;
+    top: 0.2rem;
+}
+
+#write>h3.md-focus:before {
+    top: 2px;
+}
+
+#write>h4.md-focus:before {
+    top: 2px;
+}
+
+.md-toc-item {
+    color: #A8C2DC;
+}
+
+#write div.md-toc-tooltip {
+    background-color: #363B40;
+}
+
+.dropdown-menu .btn:hover,
+.dropdown-menu .btn:focus,
+.md-toc .btn:hover,
+.md-toc .btn:focus {
+    color: white;
+    background: black;
+}
+
+#toc-dropmenu {
+    background: rgba(50, 54, 59, 0.93);
+    border: 1px solid rgba(253, 253, 253, 0.15);
+}
+
+#toc-dropmenu .divider {
+    background-color: #9b9b9b;
+}
+
+.outline-expander:before {
+    top: 2px;
+}
+
+#typora-sidebar {
+    box-shadow: none;
+    border-right: 1px dashed;
+    border-right: none;
+}
+
+.sidebar-tabs {
+    border-bottom:0;
+}
+
+#typora-sidebar:hover .outline-title-wrapper {
+    border-left: 1px dashed;
+}
+
+.outline-title-wrapper .btn {
+    color: inherit;
+}
+
+.outline-item:hover {
+    border-color: #363B40;
+    background-color: #363B40;
+    color: white;
+}
+
+h1.md-focus .md-attr,
+h2.md-focus .md-attr,
+h3.md-focus .md-attr,
+h4.md-focus .md-attr,
+h5.md-focus .md-attr,
+h6.md-focus .md-attr,
+.md-header-span .md-attr {
+    color: #8C8E92;
+    display: inline;
+}
+
+.md-comment {
+    color: #5a95e3;
+    opacity: 1;
+}
+
+.md-inline-math svg {
+    color: #b8bfc6;
+}
+
+#math-inline-preview .md-arrow:after {
+    background: black;
+}
+
+.modal-content {
+    background: var(--bg-color);
+    border: 0;
+}
+
+.modal-title {
+    font-size: 1.5em;
+}
+
+.modal-content input {
+    background-color: rgba(26, 21, 21, 0.51);
+    color: white;
+}
+
+.modal-content .input-group-addon {
+    color: white;
+}
+
+.modal-backdrop {
+    background-color: rgba(174, 174, 174, 0.7);
+}
+
+.modal-content .btn-primary {
+    border-color: var(--primary-color);
+}
+
+.md-table-resize-popover {
+    background-color: #333;
+}
+
+.form-inline .input-group .input-group-addon {
+    color: white;
+}
+
+#md-searchpanel {
+    border-bottom: 1px dashed grey;
+}
+
+/** UI for electron */
+
+.context-menu,
+#spell-check-panel,
+#footer-word-count-info {
+    background-color: #42464A;
+}
+
+.context-menu.dropdown-menu .divider,
+.dropdown-menu .divider {
+    background-color: #777777;
+}
+
+footer {
+    color: inherit;
+}
+
+@media (max-width: 1000px) {
+    footer {
+        border-top: none;
+    }
+    footer:hover {
+        color: inherit;
+    }
+}
+
+#file-info-file-path .file-info-field-value:hover {
+    background-color: #555;
+    color: #dedede;
+}
+
+.megamenu-content,
+.megamenu-opened header {
+    background: var(--bg-color);
+}
+
+.megamenu-menu-panel h2,
+.megamenu-menu-panel h1,
+.long-btn {
+    color: inherit;
+}
+
+.megamenu-menu-panel input[type='text'] {
+    background: inherit;
+    border: 0;
+    border-bottom: 1px solid;
+}
+
+#recent-file-panel-action-btn {
+    background: inherit;
+    border: 1px grey solid;
+}
+
+.megamenu-menu-panel .dropdown-menu > li > a {
+    color: inherit;
+    background-color: #2F353A;
+    text-decoration: none;
+}
+
+.megamenu-menu-panel table td:nth-child(1) {
+    color: inherit;
+    font-weight: bold;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(1) {
+    color: white;
+}
+
+.modal-footer .btn-default, 
+.modal-footer .btn-primary,
+.modal-footer .btn-default:not(:hover) {
+    border: 1px solid;
+    border-color: transparent;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+    color: white;
+    border: 1px solid #ddd;
+    background-color: inherit;
+}
+
+.modal-header {
+    border-bottom: 0;
+}
+
+.modal-footer {
+    border-top: 0;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+    color: inherit;
+}
+
+.megamenu-menu-panel .btn {
+    border: 1px solid #eee;
+    background: transparent;
+}
+
+.mouse-hover .toolbar-icon.btn:hover,
+#w-full.mouse-hover,
+#w-pin.mouse-hover {
+    background-color: inherit;
+}
+
+.typora-node::-webkit-scrollbar {
+    width: 5px;
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical {
+    background: rgba(250, 250, 250, 0.3);
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(250, 250, 250, 0.5);
+}
+
+#w-unpin {
+    background-color: #4182c4;
+}
+
+#top-titlebar, #top-titlebar * {
+    color: var(--item-hover-text-color);
+}
+
+.typora-sourceview-on #toggle-sourceview-btn,
+#footer-word-count:hover,
+.ty-show-word-count #footer-word-count {
+    background: #333333;
+}
+
+#toggle-sourceview-btn:hover {
+    color: #eee;
+    background: #333333;
+}
+
+/** focus mode */
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus) img,
+.on-focus-mode .md-task-list-item:not(.md-focus-container)>input {
+    opacity: #686868 !important;
+}
+
+.on-focus-mode li[cid]:not(.md-focus-container){
+    color: #686868;
+}
+
+.on-focus-mode .md-fences.md-focus .CodeMirror-code>*:not(.CodeMirror-activeline) *,
+.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-focus,
+.on-focus-mode .md-focus-container {
+    color: #fff;
+}
+
+.on-focus-mode #typora-source .CodeMirror-code>*:not(.CodeMirror-activeline) * {
+    color: #686868 !important;
+}
+
+
+/*diagrams*/
+#write .md-focus .md-diagram-panel {
+    border: 1px solid #ddd;
+    margin-left: -1px;
+    width: calc(100% + 2px);
+}
+
+/*diagrams*/
+#write .md-focus.md-fences-with-lineno .md-diagram-panel {
+    margin-left: auto;
+}
+
+.md-diagram-panel-error {
+    color: #f1908e;
+}
+
+.active-tab-files #info-panel-tab-file,
+.active-tab-files #info-panel-tab-file:hover,
+.active-tab-outline #info-panel-tab-outline,
+.active-tab-outline #info-panel-tab-outline:hover {
+    color: #eee;
+}
+
+.sidebar-footer-item:hover,
+.footer-item:hover {
+    background: inherit;
+    color: white;
+}
+
+.ty-side-sort-btn.active,
+.ty-side-sort-btn:hover,
+.selected-folder-menu-item a:after {
+    color: white;
+}
+
+#sidebar-files-menu {
+    border:solid 1px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.79);
+    background-color: var(--bg-color);
+}
+
+.file-list-item {
+    border-bottom:none;
+}
+
+.file-list-item-summary {
+    opacity: 1;
+}
+
+.file-list-item.active:first-child {
+    border-top: none;
+}
+
+.file-node-background {
+    height: 32px;
+}
+
+.file-library-node.active>.file-node-content,
+.file-list-item.active {
+    color: white;
+    color: var(--active-file-text-color);
+}
+
+.file-library-node.active>.file-node-background{
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+.file-list-item.active {
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+
+#ty-tooltip {
+    background-color: black;
+    color: #eee;
+}
+
+.md-task-list-item>input {
+    margin-left: -1.3em;
+    margin-top: 0.3rem;
+    -webkit-appearance: none;
+}
+
+.md-mathjax-midline {
+    background-color: #57616b;
+    border-bottom: none;
+}
+
+footer.ty-footer {
+    border-color: #656565;
+}
+
+.ty-preferences .btn-default {
+    background: transparent;
+}
+.ty-preferences .btn-default:hover {
+    background: #57616b;
+}
+
+.ty-preferences select {
+    border: 1px solid #989698;
+    height: 21px;
+}
+
+.ty-preferences .nav-group-item.active {
+    background: var(--item-hover-bg-color);
+}
+
+.ty-preferences input[type="search"] {
+    border-color: #333;
+    background: #333;
+    line-height: 22px;
+    border-radius: 6px;
+    color: white;
+}
+
+.ty-preferences input[type="search"]:focus {
+    box-shadow: none;
+}
+
+[data-is-directory="true"] .file-node-content {
+    margin-bottom: 0;
+}
+
+.file-node-title {
+    line-height: 22px;
+}
+
+.html-for-mac .file-node-open-state, .html-for-mac .file-node-icon {
+    line-height: 26px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(230, 230, 230, 0.50);
+}
+
+#typora-sidebar:hover div.sidebar-content-content::-webkit-scrollbar-thumb:horizontal {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+.nav-group-item:active {
+    background-color: #474d54;
+}
+
+.md-search-hit {
+    background: rgba(199, 140, 60, 0.81);
+    color: #eee;
+}
+
+.md-search-hit * {
+    color: #eee;
+}
+
+#md-searchpanel input {
+    color: white;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n23"><a class="md-toc-inner" href="#1-计算机系统概述">1 计算机系统概述</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n24"><a class="md-toc-inner" href="#操作系统的定义">操作系统的定义</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n26"><a class="md-toc-inner" href="#操作系统的四大特性">操作系统的四大特性</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n42"><a class="md-toc-inner" href="#操作系统的目标和功能">操作系统的目标和功能</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n44"><a class="md-toc-inner" href="#操作系统作为计算机系统资源的管理者">操作系统作为计算机系统资源的管理者</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n45"><a class="md-toc-inner" href="#处理机管理又叫进程管理）">处理机管理（又叫进程管理）</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n48"><a class="md-toc-inner" href="#存储器管理-存-射-保-扩">存储器管理 存 射 保 扩</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n51"><a class="md-toc-inner" href="#文件管理">文件管理</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n54"><a class="md-toc-inner" href="#设备管理">设备管理</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n57"><a class="md-toc-inner" href="#多道程序设计的概念和特点">多道程序设计的概念和特点</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n66"><a class="md-toc-inner" href="#多道程序设计的优点和缺点">多道程序设计的优点和缺点</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n68"><a class="md-toc-inner" href="#多道程序设计技术的实现需要解决哪些问题">多道程序设计技术的实现需要解决哪些问题</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n70"><a class="md-toc-inner" href="#整个操作系统发展的动力">整个操作系统发展的动力</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n82"><a class="md-toc-inner" href="#os的作用可表现在哪几个方面">OS的作用可表现在哪几个方面</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n84"><a class="md-toc-inner" href="#是什么原因使操作系统具有异步性特征">是什么原因使操作系统具有异步性特征？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n86"><a class="md-toc-inner" href="#为什么要引入实时操作系统">为什么要引入实时操作系统</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n88"><a class="md-toc-inner" href="#原语具有哪些特点">原语具有哪些特点？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n96"><a class="md-toc-inner" href="#什么是中断向量表">什么是中断向量表</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n98"><a class="md-toc-inner" href="#对多源中断的处理方式">对多源中断的处理方式</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n104"><a class="md-toc-inner" href="#为什么要引入中断机制中断处理过程有几步">为什么要引入中断机制？中断处理过程有几步？</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n118"><a class="md-toc-inner" href="#2-进程管理">2 进程管理</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n119"><a class="md-toc-inner" href="#21-进程与线程">2.1 进程与线程</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n120"><a class="md-toc-inner" href="#进程">进程</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n122"><a class="md-toc-inner" href="#进程的特征">进程的特征</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n132"><a class="md-toc-inner" href="#进程的创建步骤">进程的创建步骤</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n142"><a class="md-toc-inner" href="#进程的状态与转换">进程的状态与转换</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n160"><a class="md-toc-inner" href="#pcb的组织方式">PCB的组织方式</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n168"><a class="md-toc-inner" href="#进程的通信">进程的通信</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n177"><a class="md-toc-inner" href="#为什么要引入线程">为什么要引入线程</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n179"><a class="md-toc-inner" href="#进程和线程的比较">进程和线程的比较</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n191"><a class="md-toc-inner" href="#用户级线程和内核级线程的区别">用户级线程和内核级线程的区别</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n201"><a class="md-toc-inner" href="#为什么程序并发执行会产生间断性特征">为什么程序并发执行会产生间断性特征？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n203"><a class="md-toc-inner" href="#程序并发执行时为什么会失去封闭性和可再现性">程序并发执行时为什么会失去封闭性和可再现性</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n205"><a class="md-toc-inner" href="#在操作系统中为什么要引入进程的概念它会产生什么样的影响">在操作系统中为什么要引入进程的概念？它会产生什么样的影响。</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n208"><a class="md-toc-inner" href="#试说明pcb的作用具体表现在那几个方面为什么说pcb是进程存在的唯一标识">试说明PCB的作用具体表现在那几个方面？为什么说PCB是进程存在的唯一标识</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n210"><a class="md-toc-inner" href="#23-进程调度">2.3 进程调度</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n211"><a class="md-toc-inner" href="#进程调度">进程调度</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n213"><a class="md-toc-inner" href="#调度的层次">调度的层次</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n221"><a class="md-toc-inner" href="#调度算法的评价指标有哪些">调度算法的评价指标有哪些？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n227"><a class="md-toc-inner" href="#处理机调度算法的共同目标是什么批处理系统的调度目标又是什么">处理机调度算法的共同目标是什么？批处理系统的调度目标又是什么？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n229"><a class="md-toc-inner" href="#各个调度算法的概念特点缺点">各个调度算法的概念/特点/缺点</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n231"><a class="md-toc-inner" href="#为什么要引入高响应比优先调度算法他有何优点">为什么要引入高响应比优先调度算法？他有何优点？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n233"><a class="md-toc-inner" href="#在抢占调度方式中抢占的原则是什么">在抢占调度方式中，抢占的原则是什么?</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n235"><a class="md-toc-inner" href="#时间片大小的确定">时间片大小的确定</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n237"><a class="md-toc-inner" href="#多级反馈队列调度算法的优点">多级反馈队列调度算法的优点</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n247"><a class="md-toc-inner" href="#选择调度方式和算法的准则并举例">选择调度方式和算法的准则，并举例</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n259"><a class="md-toc-inner" href="#23-进程同步">2.3 进程同步</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n260"><a class="md-toc-inner" href="#制约关系分为哪几种如何理解">制约关系分为哪几种？如何理解？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n267"><a class="md-toc-inner" href="#同步机制应遵循的规则">同步机制应遵循的规则</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n277"><a class="md-toc-inner" href="#实现临界区互斥的方法有哪些">实现临界区互斥的方法有哪些？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n296"><a class="md-toc-inner" href="#什么是前驱图为什么要引入前驱图">什么是前驱图？为什么要引入前驱图</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n298"><a class="md-toc-inner" href="#原语">原语</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n300"><a class="md-toc-inner" href="#管程的组成">管程的组成</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n310"><a class="md-toc-inner" href="#24-死锁">2.4 死锁</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n311"><a class="md-toc-inner" href="#死锁概念">死锁概念</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n313"><a class="md-toc-inner" href="#死锁产生的原因">死锁产生的原因</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n321"><a class="md-toc-inner" href="#死锁的必要条件">死锁的必要条件</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n331"><a class="md-toc-inner" href="#死锁的处理策略">死锁的处理策略</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n351"><a class="md-toc-inner" href="#系统安全状态">系统安全状态</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n353"><a class="md-toc-inner" href="#在解决死锁问题的几个方法中那种方法最易于实现哪种方法使得资源利用率最高">在解决死锁问题的几个方法中，那种方法最易于实现？哪种方法使得资源利用率最高？</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n355"><a class="md-toc-inner" href="#内存管理">内存管理</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n356"><a class="md-toc-inner" href="#基本概念">基本概念</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n357"><a class="md-toc-inner" href="#内存管理的任务和功能">内存管理的任务和功能</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n369"><a class="md-toc-inner" href="#程序转变为可执行程序的步骤">程序转变为可执行程序的步骤</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n373"><a class="md-toc-inner" href="#程序的链接">程序的链接</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n377"><a class="md-toc-inner" href="#程序的装入">程序的装入</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n385"><a class="md-toc-inner" href="#什么是静态链接静态链接需要解决两个什么问题">什么是静态链接？静态链接需要解决两个什么问题？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n388"><a class="md-toc-inner" href="#什么是装入时动态链接装入时动态链接方式有何优点">什么是装入时动态链接？装入时动态链接方式有何优点？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n391"><a class="md-toc-inner" href="#什么是运行时动态链接有何优点">什么是运行时动态链接？有何优点？</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n394"><a class="md-toc-inner" href="#连续内存分配">连续内存分配</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n395"><a class="md-toc-inner" href="#连续内存分配分为哪几类">连续内存分配分为哪几类？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n405"><a class="md-toc-inner" href="#动态分区分配有哪些算法">动态分区分配有哪些算法？</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n424"><a class="md-toc-inner" href="#非连续内存分配">非连续内存分配</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n425"><a class="md-toc-inner" href="#什么是页表页表的作用是什么">什么是页表，页表的作用是什么？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n427"><a class="md-toc-inner" href="#在分页系统中是如何实现地址变换的">在分页系统中是如何实现地址变换的？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n429"><a class="md-toc-inner" href="#具有快表时是如何实现地址变换的">具有快表时是如何实现地址变换的？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n431"><a class="md-toc-inner" href="#多级页表解决了什么问题又会带来什么问题">多级页表解决了什么问题?又会带来什么问题?</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1098"><a class="md-toc-inner" href="#较详细地说明引入分段存储管理是为了满足用户哪几方面的需要">较详细地说明引入分段存储管理是为了满足用户哪几方面的需要？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n443"><a class="md-toc-inner" href="#为什么说分段系统比分页系统更易于实现信息的共享和保护">为什么说分段系统比分页系统更易于实现信息的共享和保护？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n445"><a class="md-toc-inner" href="#分页和分段存储管理有何区别">分页和分段存储管理有何区别</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n453"><a class="md-toc-inner" href="#试全面比较连续分配和离散分配方式">试全面比较连续分配和离散分配方式。</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n459"><a class="md-toc-inner" href="#虚拟内存分配">虚拟内存分配</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n460"><a class="md-toc-inner" href="#程序的局部性原理">程序的局部性原理</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n466"><a class="md-toc-inner" href="#虚拟存储器的定义">虚拟存储器的定义</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n468"><a class="md-toc-inner" href="#请求分页的基本概念思想">请求分页的基本概念/思想</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n470"><a class="md-toc-inner" href="#在请求分页系统中页表应包括哪些数据项每项的作用是什么">在请求分页系统中，页表应包括哪些数据项？每项的作用是什么？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n480"><a class="md-toc-inner" href="#试说明请求分页系统中的地址变换过程">试说明请求分页系统中的地址变换过程。</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n482"><a class="md-toc-inner" href="#何谓固定分配局部置换和可变分配全局置换的内存分配策略">何谓固定分配局部置换和可变分配全局置换的内存分配策略？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n488"><a class="md-toc-inner" href="#在请求分页系统中常采用哪几种页面置换算法">在请求分页系统中，常采用哪几种页面置换算法？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n490"><a class="md-toc-inner" href="#试说明改进型clock置换算法的基本原理">试说明改进型Clock置换算法的基本原理。</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n492"><a class="md-toc-inner" href="#时钟置换算法">时钟置换算法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n497"><a class="md-toc-inner" href="#在请求段表机制中应设置哪些段表项">在请求段表机制中，应设置哪些段表项？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n499"><a class="md-toc-inner" href="#驻留集">驻留集</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n501"><a class="md-toc-inner" href="#页面分配策略">页面分配策略</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n505"><a class="md-toc-inner" href="#页面调入时机">页面调入时机</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n508"><a class="md-toc-inner" href="#抖动">抖动</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n511"><a class="md-toc-inner" href="#什么是抖动产生抖动的原因是什么">什么是抖动？产生抖动的原因是什么？</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n514"><a class="md-toc-inner" href="#4-文件管理">4 文件管理</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n515"><a class="md-toc-inner" href="#41-文件系统基础">4.1 文件系统基础</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n516"><a class="md-toc-inner" href="#什么是文件">什么是文件？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n518"><a class="md-toc-inner" href="#文件打开">文件打开</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n520"><a class="md-toc-inner" href="#文件的逻辑结构和物理结构">文件的逻辑结构和物理结构</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n523"><a class="md-toc-inner" href="#逻辑文件的划分">逻辑文件的划分</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n535"><a class="md-toc-inner" href="#如何提高对变长记录顺序文件的检索速度">如何提高对变长记录顺序文件的检索速度？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n537"><a class="md-toc-inner" href="#文件控制块">文件控制块</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n546"><a class="md-toc-inner" href="#索引节点">索引节点</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n549"><a class="md-toc-inner" href="#目录管理的要求">目录管理的要求</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n559"><a class="md-toc-inner" href="#目录结构">目录结构</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n569"><a class="md-toc-inner" href="#目前广泛采用的目录结构形式是哪种它有什么优点">目前广泛采用的目录结构形式是哪种？它有什么优点？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n571"><a class="md-toc-inner" href="#目录查询技术">目录查询技术</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n577"><a class="md-toc-inner" href="#在hash检索法中如何解决冲突问题">在Hash检索法中，如何解决“冲突”问题？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n579"><a class="md-toc-inner" href="#共享文件的方法">共享文件的方法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n585"><a class="md-toc-inner" href="#基于索引结点的文件共享方式有何优点">基于索引结点的文件共享方式有何优点？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n587"><a class="md-toc-inner" href="#基于符号链的文件共享方式有何优点">基于符号链的文件共享方式有何优点？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n589"><a class="md-toc-inner" href="#文件保护">文件保护</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n592"><a class="md-toc-inner" href="#42-文件系统的实现">4.2 文件系统的实现</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n593"><a class="md-toc-inner" href="#文件系统层次结构">文件系统层次结构</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n600"><a class="md-toc-inner" href="#文件分配方式">文件分配方式</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n630"><a class="md-toc-inner" href="#混合索引分配">混合索引分配</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n640"><a class="md-toc-inner" href="#文件存储空间管理">文件存储空间管理</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n650"><a class="md-toc-inner" href="#43磁盘的组织和管理">4.3磁盘的组织和管理</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n651"><a class="md-toc-inner" href="#如何改善磁盘系统的性能">如何改善磁盘系统的性能</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n659"><a class="md-toc-inner" href="#磁盘读写时间构成">磁盘读写时间构成</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n668"><a class="md-toc-inner" href="#磁盘调度算法">磁盘调度算法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n670"><a class="md-toc-inner" href="#目前常用的磁盘调度算法有哪几种每种算法优先考虑的问题是什么">目前常用的磁盘调度算法有哪几种？每种算法优先考虑的问题是什么？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n750"><a class="md-toc-inner" href="#何谓磁盘高速缓存在设计磁盘高速缓存时需要考虑哪些问题">何谓磁盘高速缓存？在设计磁盘高速缓存时需要考虑哪些问题？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n766"><a class="md-toc-inner" href="#磁盘高速缓存">磁盘高速缓存</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n672"><a class="md-toc-inner" href="#如何将磁盘高速缓存中的数据传送给进程数据交付方式）">如何将磁盘高速缓存中的数据传送给进程（数据交付方式）</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n678"><a class="md-toc-inner" href="#如何选择磁盘高速缓存的调度算法">如何选择磁盘高速缓存的调度算法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n687"><a class="md-toc-inner" href="#已修改的盘块数据在何时被写回磁盘">已修改的盘块数据在何时被写回磁盘</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n689"><a class="md-toc-inner" href="#数据的一致性">数据的一致性</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n691"><a class="md-toc-inner" href="#事务的定义和特性">事务的定义和特性</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n703"><a class="md-toc-inner" href="#并发控制">并发控制</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n734"><a class="md-toc-inner" href="#并发控制有哪些方法">并发控制有哪些方法？</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n705"><a class="md-toc-inner" href="#5-io管理">5 IO管理</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n716"><a class="md-toc-inner" href="#io系统的层次结构及功能">IO系统的层次结构及功能</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n892"><a class="md-toc-inner" href="#试说明io系统的基本功能">试说明IO系统的基本功能</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n767"><a class="md-toc-inner" href="#什么是中断处理程序">什么是中断处理程序</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n722"><a class="md-toc-inner" href="#什么是设备驱动程序">什么是设备驱动程序</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n825"><a class="md-toc-inner" href="#设备驱动程序的主要任务">设备驱动程序的主要任务</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n828"><a class="md-toc-inner" href="#设备驱动程序的功能">设备驱动程序的功能</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n870"><a class="md-toc-inner" href="#io控制方式">IO控制方式</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n867"><a class="md-toc-inner" href="#dma方式和中断方式的主要区别">DMA方式和中断方式的主要区别</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1074"><a class="md-toc-inner" href="#io通道与dma方式的区别">I/O通道与DMA方式的区别</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1088"><a class="md-toc-inner" href="#试说明i0控制发展的主要推动因素是什么">试说明I/0控制发展的主要推动因素是什么？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n923"><a class="md-toc-inner" href="#有哪几种io控制方式各适用于何种场合">有哪几种I/O控制方式？各适用于何种场合？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n937"><a class="md-toc-inner" href="#试说明dma的工作流程">试说明DMA的工作流程</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n917"><a class="md-toc-inner" href="#什么是设备控制器主要功能是什么">什么是设备控制器？主要功能是什么？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n801"><a class="md-toc-inner" href="#设备控制器的组成">设备控制器的组成</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1050"><a class="md-toc-inner" href="#设备无关性的基本含义是什么为什么要设置该层">设备无关性的基本含义是什么？为什么要设置该层？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1054"><a class="md-toc-inner" href="#设备独立性的优点">设备独立性的优点</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1057"><a class="md-toc-inner" href="#使用逻辑设备名的好处">使用逻辑设备名的好处</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n723"><a class="md-toc-inner" href="#设备分配的原则">设备分配的原则</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1029"><a class="md-toc-inner" href="#设备分配方式">设备分配方式</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n725"><a class="md-toc-inner" href="#设备映射表">设备映射表</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n996"><a class="md-toc-inner" href="#spooling技术的组成假脱机技术">Spooling技术的组成（假脱机技术</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n727"><a class="md-toc-inner" href="#spooling技术的特点">SPOOLing技术的特点</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1001"><a class="md-toc-inner" href="#何谓设备虚拟实现设备虚拟式所依赖的关键技术是什么">何谓设备虚拟？实现设备虚拟式所依赖的关键技术是什么？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n961"><a class="md-toc-inner" href="#假脱机系统向用户提供共享打印机的基本思想是什么">假脱机系统向用户提供共享打印机的基本思想是什么？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n982"><a class="md-toc-inner" href="#引入缓冲的主要原因是什么">引入缓冲的主要原因是什么？</a></span></p></div><h1><a name="1-计算机系统概述" class="md-header-anchor"></a><span>1 计算机系统概述</span></h1><h3><a name="操作系统的定义" class="md-header-anchor"></a><span>操作系统的定义</span></h3><p><span>操作系统是指控制和管理整个计算机系统的硬件与软件资源，合理地组织，调度计算机的工作与资源的分配，进而为用户和其他软件提供方便接口与环境的程序的集合。</span></p><h3><a name="操作系统的四大特性" class="md-header-anchor"></a><span>操作系统的四大特性</span></h3><p><span>操作系统基本特性包括：并发，共享，虚拟，异步</span></p><ol start='' ><li><span>并发：两个或多个事件在同一时间间隔内发生（计算机系统中同时存在多个运行的程序）</span></li><li><span>共享：系统中的资源可供内存中多个并发执行的进程共同使用</span></li><li><span>虚拟：把一个物理上的实体变为若干个逻辑上的对应物</span></li><li><span>异步：多道程序环境下允许多个程序并发执行，但由于资源有限，进程的执行并不是一贯到底的，而是走走停停，以不可预知的速度向前推进。</span></li></ol><p><span>把一段时间内只允许一个进程访问的资源称为临界资源</span></p><p><span>互斥共享：一段时间内只允许一个进程访问该资源</span></p><p><span>同时访问：若干个用户同时访问该文件</span></p><p><span>操作系统利用了多种虚拟技术来实现虚拟处理器，虚拟内存，虚拟外部设备等</span></p><p><span>操作系统的虚拟技术可归纳为：时分复用技术，如处理器的分时共享；空分复用技术，如虚拟存储器</span></p><h3><a name="操作系统的目标和功能" class="md-header-anchor"></a><span>操作系统的目标和功能</span></h3><p><span>处理机管理，存储器管理，设备管理，文件管理。</span></p><h3><a name="操作系统作为计算机系统资源的管理者" class="md-header-anchor"></a><span>操作系统作为计算机系统资源的管理者</span></h3><h3><a name="处理机管理又叫进程管理）" class="md-header-anchor"></a><span>处理机管理（又叫进程管理）</span></h3><p><span>任务：进程何时创建，何时撤销，如何管理，如何避免冲突，合理共享。</span></p><p><span>功能：主要包括进程控制，进程调度，进程通信，进程同步，死锁处理。</span></p><h3><a name="存储器管理-存-射-保-扩" class="md-header-anchor"></a><span>存储器管理 存 射 保 扩</span></h3><p><span>任务：给多道程序的运行提供良好的环境，方便用户使用及提高内存的利用率</span></p><p><span>功能：内存分配与回收 地址映射 内存保护与共享 内存扩充</span></p><h3><a name="文件管理" class="md-header-anchor"></a><span>文件管理</span></h3><p><span>任务：对用户文件和系统文件进行组织管理，以方便用户使用，并保证文件的安全性</span></p><p><span>功能：文件存储空间的管理，目录管理，文件读写管理和保护</span></p><h3><a name="设备管理" class="md-header-anchor"></a><span>设备管理</span></h3><p><span>任务：完成用户的IO请求，方便用户使用各种设备，并提高设备的利用率</span></p><p><span>功能：缓冲管理，设备分配，设备处理，虚拟设备</span></p><h3><a name="多道程序设计的概念和特点" class="md-header-anchor"></a><span>多道程序设计的概念和特点</span></h3><p><span>多道程序设计技术允许多个程序同时进入内存并允许它们在CPU中交替运行，这些程序共享系统中的各种软硬件资源。</span></p><ol start='' ><li><span>多道。计算机内存中同时存放多道相互独立的程序</span></li><li><span>宏观上并行。同时进入系统的多道程序都处于运行过程中。</span></li><li><span>微观上串行。内存中的多道程序轮流占有CPU，交替执行</span></li></ol><h3><a name="多道程序设计的优点和缺点" class="md-header-anchor"></a><span>多道程序设计的优点和缺点</span></h3><p><img src="img/屏幕截图 2022-09-02 224836.png" referrerpolicy="no-referrer" alt="屏幕截图 2022-09-02 224836"></p><h3><a name="多道程序设计技术的实现需要解决哪些问题" class="md-header-anchor"></a><span>多道程序设计技术的实现需要解决哪些问题</span></h3><p><img src="img/屏幕截图 2022-09-02 224526.png" referrerpolicy="no-referrer" alt="屏幕截图 2022-09-02 224526"></p><h3><a name="整个操作系统发展的动力" class="md-header-anchor"></a><span>整个操作系统发展的动力</span></h3><ol start='3' ><li><span>不断提高计算机资源的利用率</span></li><li><span>器件不断更新迭代</span></li><li><span>方便用户</span></li><li><span>计算机体系结构的不断发展</span></li><li><span>不断提出新的应用要求。</span></li></ol><h3><a name="os的作用可表现在哪几个方面" class="md-header-anchor"></a><span>OS的作用可表现在哪几个方面</span></h3><p><span>作为用户与计算机硬件系统之间的接口：OS处于用户与计算机硬件系统之间。用户通过OS来使用计算机系统。</span>
+<span> 作为计算机系统资源的管理者：资源：处理机、存储器、I/O设备以及文件（数据和程序）。</span>
+<span> 实现了对计算机资源的抽象</span></p><h3><a name="是什么原因使操作系统具有异步性特征" class="md-header-anchor"></a><span>是什么原因使操作系统具有异步性特征？</span></h3><p><span>对于内存中的每个进程，在何时能获得处理机运行，何时又因提出某种资源请求而暂停，以及进程以怎样的速度向前推进，每道程序总共需要多少时间才能完成等，都是不可预知的，进程是以人们不可预知的速度向前推进的，此即进程的异步性。</span></p><h3><a name="为什么要引入实时操作系统" class="md-header-anchor"></a><span>为什么要引入实时操作系统</span></h3><p><img src="img/屏幕截图 2022-09-02 225542.png" referrerpolicy="no-referrer" alt="屏幕截图 2022-09-02 225542"></p><h3><a name="原语具有哪些特点" class="md-header-anchor"></a><span>原语具有哪些特点？</span></h3><ol start='' ><li><span>处于操作系统最底层，接近硬件</span></li><li><span>具有原子性，操作一气呵成，不可以被中断</span></li><li><span>运行时间较短，调用频繁。</span></li></ol><h3><a name="什么是中断向量表" class="md-header-anchor"></a><span>什么是中断向量表</span></h3><p><span>为了处理上的方便，通常是为每种设备配以相应的中断处理程序，并为每个设备的中断请求规定一个中断号。中断向量表把中断处理程序的入口地址和对应的中断号记录在一个表项中。</span></p><h3><a name="对多源中断的处理方式" class="md-header-anchor"></a><span>对多源中断的处理方式</span></h3><ol start='' ><li><span>屏蔽中断。当处理机正在处理一个中断时，讲屏蔽掉所有的中断。直到CPU完成本次中断的处理后，再去检查是否有中断发生。</span></li><li><span>嵌套中断。当同时有多个不同优先级的中断请求时，CPU优先响应最高优先级的中断请求。高优先级的中断请求可以抢占正在运行的低优先级中断的处理机。</span></li></ol><h3><a name="为什么要引入中断机制中断处理过程有几步" class="md-header-anchor"></a><span>为什么要引入中断机制？中断处理过程有几步？</span></h3><p><span>为了提高多道程序运行环境中CPU和各种设备的利用率，提高系统的吞吐量。</span></p><p><span>五步：</span></p><ol start='' ><li><span>测定是否有未响应的中断信号</span></li><li><span>保护被中断进程的CPU环境</span></li><li><span>转入相应的设备处理程序</span></li><li><span>中断处理</span></li><li><span>恢复CPU的现场并退出中断</span></li></ol><h1><a name="2-进程管理" class="md-header-anchor"></a><span>2 进程管理</span></h1><h2><a name="21-进程与线程" class="md-header-anchor"></a><span>2.1 进程与线程</span></h2><h3><a name="进程" class="md-header-anchor"></a><span>进程</span></h3><p><span>程序段，数据段，PCB构成了进程实体，进程是进程实体的运行过程，是操作系统进行处理机调度和资源分配的基本单位</span></p><h3><a name="进程的特征" class="md-header-anchor"></a><span>进程的特征</span></h3><ol start='' ><li><span>动态性。进程的实质是进程实体的执行过程</span></li><li><span>并发性。多个进程同时存在于内存中，且能在一段时间内同时运行</span></li><li><span>独立性。进程是一个能独立运行，独立获得资源，独立接受调度的基本单位。</span></li><li><span>异步性。进程是按异步方式运行的，即按各自独立的，不可预知的速度向前推进</span></li></ol><h3><a name="进程的创建步骤" class="md-header-anchor"></a><span>进程的创建步骤</span></h3><ol start='' ><li><span>首先为新进程分配一个唯一得进程标识号，然后申请一个空白PCB。若PCB申请失败，则进程创建失败。</span></li><li><span>然后为该进程分配运行时所必须的资源，如内存，文件，IO设备；如果所需的资源不能立即满足，则仍处于创建态。</span></li><li><span>初始化PCB，主要包括初始化标志信息，初始化处理机状态信息等。</span></li><li><span>最后把该进程转入就绪态并插入就绪队列。</span></li></ol><h3><a name="进程的状态与转换" class="md-header-anchor"></a><span>进程的状态与转换</span></h3><ol start='' ><li><span>运行态。进程在处理机上运行</span></li><li><span>就绪态。进程获得了除了CPU外的一切所需资源。一旦获得CPU即可运行</span></li><li><span>阻塞态。进程正在等待某一事件而暂停运行。</span></li><li><span>创建态。进程正在被创建，尚未转到就绪态。</span></li><li><span>结束态。进程正在从系统中消失，可能是进程正常结束或其他原因退出运行。</span></li></ol><p><span>转换图：</span></p><p><span>就绪 to 运行 通过进程调度和进程切换上处理机</span></p><p><span>运行 to 就绪 时间片到/被更高优先级进程抢占</span></p><p><span>运行 to 阻塞 进程请求某一资源/等待某一事件发生</span></p><p><span>阻塞 to 就绪 进程等待事件到来/进程请求的资源已经分配好</span></p><p><img src="img/屏幕截图 2022-09-02 234832.png" referrerpolicy="no-referrer" alt="屏幕截图 2022-09-02 234832"></p><h3><a name="pcb的组织方式" class="md-header-anchor"></a><span>PCB的组织方式</span></h3><ol start='' ><li><span>线性方式 即将系统中所有的PCB都组织在一张线性表中</span></li><li><span>链接方式 即把具有相同状态进程的PCB分别通过PCB中的链接字链接成一个队列</span></li><li><span>索引方式 即系统根据所有进程状态的不同，建立几张索引表</span></li></ol><h3><a name="进程的通信" class="md-header-anchor"></a><span>进程的通信</span></h3><p><span>高级通信方法</span></p><ol start='' ><li><span>共享存储 通信的进程之间有一块可以直接访问的共享空间，进程可以直接读写实现进程之间的信息交换</span></li><li><span>消息传递 进程之间传递格式化的消息</span></li><li><span>管道通信 通过缓冲区来传递消息</span></li></ol><h3><a name="为什么要引入线程" class="md-header-anchor"></a><span>为什么要引入线程</span></h3><p><span>线程是轻量级的进程，为了减小程序在并发执行时的时空开销，使OS有更好的并发性，提高CPU的利用率 ，于是在操作系统中引入线程</span></p><h3><a name="进程和线程的比较" class="md-header-anchor"></a><span>进程和线程的比较</span></h3><ol start='' ><li><span>调度 线程是调度的基本单位，线程是资源分配的基本单位</span></li><li><span>拥有资源 进程是资源分配的基本单位，线程不拥有系统资源，但可以使用其隶属进程的系统资源</span></li><li><span>并发性 不仅进程之间可以并发执行，多个线程之间也可以并发执行</span></li><li><span>系统开销 系统创建进程的开销远大于创建或撤销线程的开销</span></li><li><span>独立性 每个进程都拥有独立的地址空间和资源，而线程共享它们所属进程的地址空间和资源。</span></li></ol><h3><a name="用户级线程和内核级线程的区别" class="md-header-anchor"></a><span>用户级线程和内核级线程的区别</span></h3><ol start='' ><li><span>内核支持线程是OS内核可感知的，而用户级线程是OS内核不可感知的。</span></li><li><span>用户级线程的创建、撤消和调度不需要OS内核的支持，而内核级线程需要</span></li><li><span>用户级线程运行在用户态，而内核级线程可以运行在任何状态下。</span></li><li><span>在只有用户级线程的系统内，CPU调度还是以进程为单位。在有内核级线程的系统内，CPU调度则以线程为单位</span></li></ol><h3><a name="为什么程序并发执行会产生间断性特征" class="md-header-anchor"></a><span>为什么程序并发执行会产生间断性特征？</span></h3><p><span>程序并发执行时，他们共享系统资源，由于资源是有限的，使这些并发执行的进程之间，形成了相互制约关系，从而使得进程在执行期间出现间断性。</span></p><h3><a name="程序并发执行时为什么会失去封闭性和可再现性" class="md-header-anchor"></a><span>程序并发执行时为什么会失去封闭性和可再现性</span></h3><p><span>程序并发执行时，多个程序共享系统中的各种资源，因而这些资源的状态由多个程序改变，并且进程的执行具有异步性，最终使程序运行失去了封闭性，也会导致其失去可再现性。</span></p><h3><a name="在操作系统中为什么要引入进程的概念它会产生什么样的影响" class="md-header-anchor"></a><span>在操作系统中为什么要引入进程的概念？它会产生什么样的影响。</span></h3><p><span>为了使程序在多道程序环境下能并发执行，并对并发执行的程序加以控制和描述，在操作系统中引入了进程的概念。</span></p><p><span>影响：使程序的并发执行得以实行，提高了资源的利用率。</span></p><h3><a name="试说明pcb的作用具体表现在那几个方面为什么说pcb是进程存在的唯一标识" class="md-header-anchor"></a><span>试说明PCB的作用具体表现在那几个方面？为什么说PCB是进程存在的唯一标识</span></h3><p><span>PCB是进程实体的一部分，记录了进程的状态信息。有了PCB之后，程序成为一个能独立运行的基本单位，成为能与其他进程并发执行的进程。PCB和进程一一对应，OS是根据PCB对并发执行的进程进行控制和管理的，所以说PCB是进程存在的唯一标识</span></p><h2><a name="23-进程调度" class="md-header-anchor"></a><span>2.3 进程调度</span></h2><h3><a name="进程调度" class="md-header-anchor"></a><span>进程调度</span></h3><p><span>在单处理器多道程序环境中，内存中同时存在多个进程，但只有一个处理机，每次一个进程执行完后，需要操作系统通过某种调度算法来从就绪队列中选择一个进程上处理机运行。</span></p><h3><a name="调度的层次" class="md-header-anchor"></a><span>调度的层次</span></h3><ol start='' ><li><span>作业调度。按照一定的原则从外存上处于后备队列的作业中挑选-一个(或多个)，给它(们)分配内存、输入/输出设备等必要的资源，并建立相应的进程</span></li><li><span>内存调度。把外存上的那些已具备运行条件的挂起态进程再重新调入内存，并修改其状态为就绪态，挂在就绪队列上等待。</span></li><li><span>进程调度。按照某种算法从就绪队列中选取一个进程，将处理机分配给它。</span></li></ol><h3><a name="调度算法的评价指标有哪些" class="md-header-anchor"></a><span>调度算法的评价指标有哪些？</span></h3><p><span>CPU利用率 </span></p><p><span>系统吞吐量  单位时间内CPU完成作业的数量</span></p><p><span>周转时间 从作业提交到作业完成所经历的时间</span></p><p><span>等待时间 等待CPU的时间之和</span></p><p><span>响应时间 从用户提交请求到系统首次产生响应所用的时间</span></p><h3><a name="处理机调度算法的共同目标是什么批处理系统的调度目标又是什么" class="md-header-anchor"></a><span>处理机调度算法的共同目标是什么？批处理系统的调度目标又是什么？</span></h3><p><span>处理机调度算法的共同目标：资源利用率、公平性、平衡性、策略强制执行。批处理系统的调度目标：平均周转时间短、系统吞吐量高、处理机利用率高</span></p><h3><a name="各个调度算法的概念特点缺点" class="md-header-anchor"></a><span>各个调度算法的概念/特点/缺点</span></h3><p><span>略。见思维导图</span></p><h3><a name="为什么要引入高响应比优先调度算法他有何优点" class="md-header-anchor"></a><span>为什么要引入高响应比优先调度算法？他有何优点？</span></h3><p><span>在批处理系统中，先来先服务算法（FCFS）所考虑的只是作业的等待时间，而忽视了作业运行时间。而短作业优先算法（SJF）正好与之相反，只考虑作业运行时间，而忽视了作业等待时间。高响应比优先调度算法则是既考虑了作业等待时间，又考虑作业运行时间的调度算法，因此既照顾了短作业，又不致使长作业的等待时间过长，从而改善了处理机调度的性能。</span></p><h3><a name="在抢占调度方式中抢占的原则是什么" class="md-header-anchor"></a><span>在抢占调度方式中，抢占的原则是什么?</span></h3><p><span>优先权原则、短进程优先原则、时间片原则</span></p><h3><a name="时间片大小的确定" class="md-header-anchor"></a><span>时间片大小的确定</span></h3><p><span>若选择很小的时间片，将有利于短作业。但时间片小，意味着会频繁地执行进程调度和</span>
+<span>进程上下文的切换，这无疑会增加系统的开销。反之，若时间片选择得太长，且为使每个</span>
+<span>进程都能在一个时间片内完成，RR算法便退化为FCFS算法，无法满足短作业和交互式用</span>
+<span>户的需求。</span><strong><span>一个较为可取的时间片大小是略大于一次典型的交互所需要的时间，使大多数</span></strong>
+<strong><span>交互式进程能在-一个时间片内完成</span></strong><span>，从而可以获得很小的响应时间 。</span></p><h3><a name="多级反馈队列调度算法的优点" class="md-header-anchor"></a><span>多级反馈队列调度算法的优点</span></h3><ol start='' ><li><span>提高系统吞吐量且缩短平均周转时间，照顾短进程</span></li><li><span>不必是事先估计进程的执行时间</span></li><li><span>对于短进程，响应快，在前几个队列中就能完成，周转时间短</span></li><li><span>对于长进程，依次在多级队列中运行，用户不必担心长期得不到处理</span></li></ol><h3><a name="选择调度方式和算法的准则并举例" class="md-header-anchor"></a><span>选择调度方式和算法的准则，并举例</span></h3><p><span>对于如何选择调度方式和算法，在很大程度上取决于操作系统的类型及其设计目标</span></p><p><span>一些基本的原则：</span></p><ol start='' ><li><span>要提高系统资源的利用率</span></li><li><span>使诸进程都获得合理的CPU时间，不会发生进程饥饿现象</span></li><li><span>调度算法应尽可能保持系统资源使用的平衡性</span></li></ol><p><span>举例：</span></p><p><img src="屏幕截图 2022-09-04 231805.png" referrerpolicy="no-referrer" alt="屏幕截图 2022-09-04 231805"></p><h2><a name="23-进程同步" class="md-header-anchor"></a><span>2.3 进程同步</span></h2><h3><a name="制约关系分为哪几种如何理解" class="md-header-anchor"></a><span>制约关系分为哪几种？如何理解？</span></h3><p><span>分为两种：间接制约关系和直接制约关系</span></p><ol start='' ><li><span>间接制约关系：多个程序在并发执行时，由于共享系统资源，如CPU、I/O设备等，致使在这些并发执行的程序之间形成间接制约的关系。</span></li><li><span>直接制约关系：某些应用程序，为了完成某任务而建立了两个或多个进程。这些进程将为完成同一项任务而相互合作。进程间的直接制约关系就是源于它们之间的相互合作。</span></li></ol><h3><a name="同步机制应遵循的规则" class="md-header-anchor"></a><span>同步机制应遵循的规则</span></h3><ol start='' ><li><span>空闲让进。当无进程处于临界区时，表明临界资源处于空闲状态，应允许一个请</span>
+<span>求进入临界区的进程立即进入自己的临界区，以有效地利用临界资源。</span></li><li><span>忙则等待。当已有进程进入临界区时，表明临界资源正在被访问，因而其它试图</span>
+<span>进入临界区的进程必须等待，以保证对临界资源的互斥访问。</span></li><li><span>有限等待。对要求访问临界资源的进程，应保证在有限时间内能进入自己的临界</span>
+<span>区，以免陷入“死等”状态。</span></li><li><span>让权等待。当进程不能进入自己的临界区时，应立即释放处理机，以免进程陷入</span>
+<span>“忙等”状态。</span></li></ol><h3><a name="实现临界区互斥的方法有哪些" class="md-header-anchor"></a><span>实现临界区互斥的方法有哪些？</span></h3><p><span>软件方法：</span></p><ol start='' ><li><span>单标志法</span></li><li><span>双标志先检查法</span></li><li><span>双标志后检查法</span></li><li><span>Peterson算法</span></li></ol><p><span>硬件方法：</span></p><ol start='' ><li><span>中断屏蔽方法</span></li><li><span>TestAndSet指令</span></li><li><span>Swap指令</span></li></ol><h3><a name="什么是前驱图为什么要引入前驱图" class="md-header-anchor"></a><span>什么是前驱图？为什么要引入前驱图</span></h3><p><span>为了能更好地描述程序的顺序和并发执行情况，我们引入前趋图。所谓前趋图是指一个“有向无环图。图中的每个结点可用来表示一个进程或程序段，结点间的有向边描述结点之间执行的先后顺序</span></p><h3><a name="原语" class="md-header-anchor"></a><span>原语</span></h3><p><span>原语是指完成某种功能且不可被分割中断执行的操作序列，通常由关中断，开中断来实现</span></p><h3><a name="管程的组成" class="md-header-anchor"></a><span>管程的组成</span></h3><ol start='' ><li><span>管程的名称</span></li><li><span>局部于管程内部的共享数据结构说明</span></li><li><span>对该数据结构进行操作的一组过程</span></li><li><span>对局部于管程内部的共享数据设置初始值的语句</span></li></ol><h2><a name="24-死锁" class="md-header-anchor"></a><span>2.4 死锁</span></h2><h3><a name="死锁概念" class="md-header-anchor"></a><span>死锁概念</span></h3><p><span>死锁的概念：多个进程因竞争资源而造成的一种互相等待的僵局，若无外力作用，这些进程都将无法向前推进。</span></p><h3><a name="死锁产生的原因" class="md-header-anchor"></a><span>死锁产生的原因</span></h3><ol start='' ><li><span>进程对不可剥夺的系统资源的竞争</span></li><li><span>进程推进顺序非法</span></li><li><span>信号量使用不当</span></li></ol><h3><a name="死锁的必要条件" class="md-header-anchor"></a><span>死锁的必要条件</span></h3><ol start='' ><li><span>互斥条件 进程互斥使用资源，即在一段时间内，某资源只能被一个进程占用。</span></li><li><span>请求和保持条件。进程已经保持了至少一个资源，但又提出了新的资源请求</span></li><li><span>不可抢占条件。进程已获得的资源在未使用完之前不能被抢占，只能在进程使用</span>
+<span>完时由自己释放。</span></li><li><span>循环等待条件。在发生死锁时，必然存在一个进程一资源的循环链。</span></li></ol><h3><a name="死锁的处理策略" class="md-header-anchor"></a><span>死锁的处理策略</span></h3><p><span>死锁预防 破坏产生死锁的4个必要条件中的一个或多个</span></p><ol start='' ><li><span>破坏互斥条件</span></li><li><span>破坏不可剥夺条件 若一个已经保持某些不可剥夺资源的进程请求新的资源得不到满足时，它必须释放已持有的资源</span></li><li><span>破坏请求和保持条件 采用静态分配法，一次性把进程所需要的所有资源分配给它，如果无法满足，则该进程不能运行</span></li><li><span>破坏循环等待条件 采用顺序资源分配法，给系统的资源编号，规定每个进程必须按编号递增的顺序请求资源，同类资源一次申请完。</span></li></ol><p><span>死锁避免 使用银行家算法</span><strong><span>防止系统进入不安全状态</span></strong></p><p><span>死锁检测和解除。不采取任何措施，在发生死锁后，系统能够及时检测出死锁，然后采取某种措施解除死锁。</span></p><ol start='' ><li><span>资源剥夺法</span></li><li><span>撤销进程法</span></li><li><span>进程回退法</span></li></ol><h3><a name="系统安全状态" class="md-header-anchor"></a><span>系统安全状态</span></h3><p><span>所谓安全状态，是指系统能按某种进程推进顺序（P1,P2,....,Pn）为每个进程Pi分配其所需的资源，直到满足每个进程对资源的最大需求，使每个进程都可顺序完成。</span></p><h3><a name="在解决死锁问题的几个方法中那种方法最易于实现哪种方法使得资源利用率最高" class="md-header-anchor"></a><span>在解决死锁问题的几个方法中，那种方法最易于实现？哪种方法使得资源利用率最高？</span></h3><p><span>解决死锁的方法有预防死锁，避免死锁，检测和解除死锁，其中预防死锁方法最容易实现，但由于所施加的限制条件过于严格,会导致系统资源利用率和系统吞吐量降低；而检测和解除死锁方法使得系统有较好的资源利用率和吞吐量</span></p><h1><a name="内存管理" class="md-header-anchor"></a><span>内存管理</span></h1><h2><a name="基本概念" class="md-header-anchor"></a><span>基本概念</span></h2><h3><a name="内存管理的任务和功能" class="md-header-anchor"></a><span>内存管理的任务和功能</span></h3><p><strong><span>给多道程序提供良好的运行环境</span></strong><span>，方便用户使用内存，提高内存的利用率。</span></p><p><span>功能：</span></p><ol start='' ><li><span>内存的分配和回收</span></li><li><span>地址映射</span></li><li><span>内存扩充</span></li><li><span>内存的保护和共享</span></li></ol><h3><a name="程序转变为可执行程序的步骤" class="md-header-anchor"></a><span>程序转变为可执行程序的步骤</span></h3><p><strong><span>编译：由编译程序把源代码编译为多个目标模块</span></strong></p><p><strong><span>链接：由链接程序把编译后形成的一组模块以及所需的库函数链接在一起，形成一个完整的装入模块。</span></strong></p><p><strong><span>装入：由装入程序把装入模块装入内存运行。</span></strong></p><h3><a name="程序的链接" class="md-header-anchor"></a><span>程序的链接</span></h3><p><span>静态链接 在程序运行之前，先将各目标模块及它们所需要的库函数链接成一个完整的可执行程序，以后不再拆开</span></p><p><span>装入时动态链接 将用户源程序编译后得到一组目标模块，在装入内存时，采取编装入边链接的方式</span></p><p><span>运行时动态链接 对于某些目标模块的链接，是在程序执行中需要该目标模块时才进行的</span></p><h3><a name="程序的装入" class="md-header-anchor"></a><span>程序的装入</span></h3><ol start='' ><li><span>绝对装入方式。在单道程序环境下，用户程序编译后，产生绝对地址的目标代码，此时可以采用绝对装入方式</span></li><li><span>可重定位装入。在多道程序环境下，多个目标模块的起始地址通常都从0开始，程序中的其他地址都是相对于起始地址的，在装入时对目标程序中指令和数据地址进行修改。</span></li><li><span>动态运行时装入。装入程序把装入模块装入内存后，并不立即把装入模块中的相对地址转换为绝对地址，而是把这种地址转换推迟到程序真正要执行时才进行。</span></li></ol><h3><a name="什么是静态链接静态链接需要解决两个什么问题" class="md-header-anchor"></a><span>什么是静态链接？静态链接需要解决两个什么问题？</span></h3><p><span>在程序运行之前，先将各目标模块及它们所需的库函数连接成一个完整的装配模块，以后不再拆开。这种事先进行连接的方式称为静态链接方式。</span></p><p><span>要解决两个问题：对相对地址进行修改；变换外部调用符号</span></p><h3><a name="什么是装入时动态链接装入时动态链接方式有何优点" class="md-header-anchor"></a><span>什么是装入时动态链接？装入时动态链接方式有何优点？</span></h3><p><span>将用户源程序编译后所得到的一组目标模块，在装入内存时，采用边装入边链接的链接方式。</span></p><p><span>优点：便于修改和更新；便于实现对目标模块的共享</span></p><h3><a name="什么是运行时动态链接有何优点" class="md-header-anchor"></a><span>什么是运行时动态链接？有何优点？</span></h3><p><span>将某些模块的链接推迟到程序执行时才进行。</span></p><p><span>优点：加快程序的装入过程；节省大量的内存空间。</span></p><h2><a name="连续内存分配" class="md-header-anchor"></a><span>连续内存分配</span></h2><h3><a name="连续内存分配分为哪几类" class="md-header-anchor"></a><span>连续内存分配分为哪几类？</span></h3><ol start='' ><li><span>单一连续分配</span></li><li><span>固定分区分配</span></li><li><span>动态分区分配</span></li><li><span>可重定位分配</span></li></ol><h3><a name="动态分区分配有哪些算法" class="md-header-anchor"></a><span>动态分区分配有哪些算法？</span></h3><p><span>基于顺序搜索的动态分区分配算法：</span></p><ol start='' ><li><span>首次适应算法</span></li><li><span>循环首次适应算法</span></li><li><span>最佳适应算法</span></li><li><span>最坏适应算法</span></li></ol><p><span>基于索引搜索的动态分区分配算法</span></p><ol start='' ><li><span>快速适应算法</span></li><li><span>伙伴系统</span></li><li><span>哈希算法</span></li></ol><h2><a name="非连续内存分配" class="md-header-anchor"></a><span>非连续内存分配</span></h2><h3><a name="什么是页表页表的作用是什么" class="md-header-anchor"></a><span>什么是页表，页表的作用是什么？</span></h3><p><span>在分页系统中，允许将进程的各个页离散地存储在内存的任一物理块中，为保证进程仍然能够正确地运行，即能在内存中找到每个页面所对应的物理块，系统又为每个进程建立了一张页面映射表，简称页表。页表的作用是实现从页号到物理块号的地址映射。</span></p><h3><a name="在分页系统中是如何实现地址变换的" class="md-header-anchor"></a><span>在分页系统中是如何实现地址变换的？</span></h3><p><span>利用地址变换机构实现从逻辑地址到物理地址的转变换，通过页表来实现从页号到物理块号的变换，将逻辑地址中的页号转换为内存中的物理块号，然后加上逻辑地址的页内偏移即可得到物理地址。</span></p><h3><a name="具有快表时是如何实现地址变换的" class="md-header-anchor"></a><span>具有快表时是如何实现地址变换的？</span></h3><p><span>在CPU给出有效地址后，先去高速缓冲寄存器中的快表查询，将此页号与快表中的所有页号进行比较，若其中有与此所对应的物理块号，便将物理块号加上页内偏移得到物理地址。如在快表中未找到对应的页表项，则还需再访问内存中的页表，找到后，通过拼接得到物理地址；同时，再将此页表项存入快表的一个寄存器单元中，即：更新快表。如果此时快表已满，则通过某种算法淘汰一项，再存入。</span></p><h3><a name="多级页表解决了什么问题又会带来什么问题" class="md-header-anchor"></a><span>多级页表解决了什么问题?又会带来什么问题?</span></h3><p><span>多级页表解决了当逻辑地址空间过大时,页表的长度会大大增加的问题。而采用多级页表时,一次访 盘需要多次访问内存甚至磁盘，会大大增加一次访存 的时间。</span></p><h3><a name="较详细地说明引入分段存储管理是为了满足用户哪几方面的需要" class="md-header-anchor"></a><span>较详细地说明引入分段存储管理是为了满足用户哪几方面的需要？</span></h3><ol start='' ><li><span>方便编程：用户通常把自己的作业按照逻辑关系划分为若干段</span></li><li><span>信息共享：段是信息的逻辑单位，方便共享信息。</span></li><li><span>信息保护：对信息的逻辑单位进行保护，分段能更有效方便地实现信息保护功能</span></li><li><span>动态增长</span></li><li><span>动态链接</span></li></ol><h3><a name="为什么说分段系统比分页系统更易于实现信息的共享和保护" class="md-header-anchor"></a><span>为什么说分段系统比分页系统更易于实现信息的共享和保护？</span></h3><p><span>分页系统的每个页面是分散存储的，它们没有逻辑上的联系，因此如果为了实现信息共享和保护，需要建立大量的页表项，记录每一页的共享和保护信息，并且可能会出现一个页内代码出现不同保护等级的现象；而分段系统中每个段都是程序员手动设置的，是相互联系的代码的集合，在实现共享和保护时，只需为要共享和保护的程序设置一个段表项，将其中的基址与内存地址一一对应就能够实现。</span></p><h3><a name="分页和分段存储管理有何区别" class="md-header-anchor"></a><span>分页和分段存储管理有何区别</span></h3><ol start='' ><li><span>页是信息的物理单位，分页是为了实现离散分配方式，以消减内存的外部零头，提高内存利用率。段则是信息的逻辑单位，它含有一组相对完整的信息。</span></li><li><span>页的大小固定且由系统决定，由系统把逻辑地址划分为页号和页内地址两部分，是由机械硬件实现的,因而在系统中只能有一种大小的的页面;而段的长度却不固定,决定于用户所编写的程序,通常由编译程序在对原程序进行编译时,根据信息的性质来划分。</span></li><li><span>分页的作业地址空间是一维的,而分段作业地址空间则是二维的。</span></li></ol><h3><a name="试全面比较连续分配和离散分配方式" class="md-header-anchor"></a><span>试全面比较连续分配和离散分配方式。</span></h3><ol start='' ><li><span>连续分配是指为一个用户程序分配一个连续的地址空间，包括单一连续分配，固定分区分配，动态分区分配，可重定位分配。</span></li><li><span>离散分配方式分为分页、分段和段页式存储管理。分页式存储管理旨在提高内存利用率，分段式存储管理旨在满足用户(程序员)的需要，段页式存储管理则将两者结合起来，具有分段系统便于实现、可共享、易于保护和动态链接等优点，又能像分页系统很好解决外部碎片及为各段可离散分配内存等问题，是比较有效的存储管理方式；</span></li></ol><h2><a name="虚拟内存分配" class="md-header-anchor"></a><span>虚拟内存分配</span></h2><h3><a name="程序的局部性原理" class="md-header-anchor"></a><span>程序的局部性原理</span></h3><ol start='' ><li><span>时间局部性。程序中的某条指令一旦执行，不久后该指令可以再次执行。某数据被访问过，不久后数据可能再次被访问。产生原因是程序中存在大量的循环操作</span></li><li><span>空间局部性。一旦程序访问了某个存储单元，在不久后，其附近的存储单元也将被访问。因为指令通常是顺序存放、顺序执行的，数据也一般是以向量、数组、表等形式存储的。</span></li></ol><h3><a name="虚拟存储器的定义" class="md-header-anchor"></a><span>虚拟存储器的定义</span></h3><p><span>基于局部性原理，在程序装入时，仅须将程序当前要运行的少数页面或段先装入内存，而将其余部分暂留在外存，便可启动程序执行。在程序执行过程中，当所访问的信息不在内存时，由操作系统将所需要的部分调入内存，然后继续执行程序。另一方面，操作系统将内存中暂时不使用的内容换出到外存上，从而腾出空间存放将要调入内存的信息。这样，系统好像为用户提供了一个比实际内存容量大得多的存储器，称为虚拟存储器。</span></p><h3><a name="请求分页的基本概念思想" class="md-header-anchor"></a><span>请求分页的基本概念/思想</span></h3><p><span>在请求分页系统中，只要求将当前需要的一部分页面装入内存，便可以启动作业运行。在作业执行过程中，当所要访问的页面不在内存中时，再通过调页功能将其调入，同时还可通过置换功能将暂时不用的页面换出到外存上，以便腾出内存空间。</span></p><h3><a name="在请求分页系统中页表应包括哪些数据项每项的作用是什么" class="md-header-anchor"></a><span>在请求分页系统中，页表应包括哪些数据项？每项的作用是什么？</span></h3><ol start='' ><li><span>状态位（存在位）P：它用于指示该页是否已调入内存，供程序访问时参考。</span></li><li><span>访问字段A：用于记录本页在一段时间内被访问的次数，或记录本页最近已有多长时间未被访问，提供给置换算法（程序）在选择换出页面时参考。</span></li><li><span>修改位M：标识该页再调入内存后是否被修改过。</span></li><li><span>外存地址：用于指出该页在外存上的地址，通常是物理块号，供调入该页时参考。</span></li></ol><h3><a name="试说明请求分页系统中的地址变换过程" class="md-header-anchor"></a><span>试说明请求分页系统中的地址变换过程。</span></h3><p><span>在进行地址变换时，首先检索快表，试图从中找出所要访问的页。若找到，便修改页表项中的访问位A，供置换算法选换出页面时参考。对于写指令，还需将修改位M置成“1”，表示该页再调入内存后已被修改。否则，去内存中查询页表，如果发生缺页中断则通过OS的调页程序将页面调入内存。最后利用页表项中给出的物理块号和页内地址形成物理地址。</span></p><h3><a name="何谓固定分配局部置换和可变分配全局置换的内存分配策略" class="md-header-anchor"></a><span>何谓固定分配局部置换和可变分配全局置换的内存分配策略？</span></h3><ol start='' ><li><span>固定分配局部置换。固定分配为每个进程分配一组固定数目的物理块，在进程运行期间不再改变。局部置换是指如果进程在运行中发现缺页，则只能从分配给该进程的n个页面中选出一页换出，然后再调入一页，以保证分配给该进程的内存空间不变。</span></li><li><span>可变分配全局置换。可变分配是指先为每个进程分配一定数目的物理块，在进程运行期间，可根据情况做适当的增加或减少。全局置换是指如果进程在运行中发现缺页，则将OS所保留的空闲物理块取出一块分配给该进程，或者以所有进程的全部物理快为标的，选择一块换出，然后将所缺之页调入。</span></li></ol><h3><a name="在请求分页系统中常采用哪几种页面置换算法" class="md-header-anchor"></a><span>在请求分页系统中，常采用哪几种页面置换算法？</span></h3><p><span>采用的页面置换算法有：最佳置换算法和先进先出置换算法，最近最久未使用（LRU）置换算法，Clock置换算法，最少使用置换算法，页面缓冲算法等。</span></p><h3><a name="试说明改进型clock置换算法的基本原理" class="md-header-anchor"></a><span>试说明改进型Clock置换算法的基本原理。</span></h3><p><span>因为修改过的页面在换出时付出的开销比未被修改过的页面大，在改进型Clock算法中，既考虑页面的使用情况，还要增加置换代价的因素；在选择页面作为淘汰页面时，把同时满足未使用过和未被修改过作为首选淘汰页面。</span></p><h3><a name="时钟置换算法" class="md-header-anchor"></a><span>时钟置换算法</span></h3><p><span>简单时钟置换算法：</span></p><p><span>给每一帧关联一个附加位，称为使用位。页面初次被调入内存或者刚被访问过时，把使用位置为1。把候选帧集合看作一个循环缓冲区，当需要替换一页时，扫描缓冲区，查找使用位被置为0的帧。每遇到使用位为1的帧时，扫描过后就将其置为0.</span></p><p><span>改进型时钟置换算法</span></p><p><span>改进型时钟置换算法在使用位的基础上增加了修改位，用来表示当前帧是否被修改，将页面进一步细分为使用过但未修改，使用过且修改过。每次循环扫描缓冲区时，有未使用过则先置换出为使用过，若全部使用过，则优先置换为修改过的页面。</span></p><h3><a name="在请求段表机制中应设置哪些段表项" class="md-header-anchor"></a><span>在请求段表机制中，应设置哪些段表项？</span></h3><p><span>段名、段长、段基址、存取方式、访问字段、修改位、存在位、增补位、外存始地址。</span></p><h3><a name="驻留集" class="md-header-anchor"></a><span>驻留集</span></h3><p><span>驻留集是指为当前进程分配的物理页框的结合</span></p><h3><a name="页面分配策略" class="md-header-anchor"></a><span>页面分配策略</span></h3><p><span>固定分配局部置换</span></p><p><span>可变分配局部置换</span></p><p><span>可变分配全局置换</span></p><h3><a name="页面调入时机" class="md-header-anchor"></a><span>页面调入时机</span></h3><p><span>预调页策略：根据程序的局部性原理，在程序第一次被调入内存执行时，有程序员指定调入页面的地址信息</span></p><p><span>请求调页策略：在程序执行过程中，发生缺页中断时，需要调页程序发出调页请求，由操作系统将所需页面调入内存</span></p><h3><a name="抖动" class="md-header-anchor"></a><span>抖动</span></h3><p><span>抖动是指刚刚换出内存的页面又要换入内存，刚刚换入内存的页面又要换出内存。</span></p><p><span>抖动发生的原因：操作系统给某个进程分配的页面数量小于进程频繁访问的页面数量</span></p><h3><a name="什么是抖动产生抖动的原因是什么" class="md-header-anchor"></a><span>什么是抖动？产生抖动的原因是什么？</span></h3><p><span>抖动就是指当内存中已无空闲空间而又发生缺页中断时，需要从内存中调出一页程序或数据送磁盘的对换区中，而接下来刚被换出的页很快被访问，需重新调入。如此频繁更换页面，使得系统把大部分时间用在了页面的调进换出上，而几乎不能完成任何有效的的工作，我们称这种现象为“抖动”。</span></p><p><span>产生抖动的原因是系统中 同时运行的进程太多，由此分配给每个进程的物理块太少，不能满足进程正常运行的基本要求，致使每个进程运行时频繁缺页。</span></p><h1><a name="4-文件管理" class="md-header-anchor"></a><span>4 文件管理</span></h1><h2><a name="41-文件系统基础" class="md-header-anchor"></a><span>4.1 文件系统基础</span></h2><h3><a name="什么是文件" class="md-header-anchor"></a><span>什么是文件？</span></h3><p><span>文件是以计算机硬盘为载体存储在计算机上的信息集合，是用户进行输入输出的基本单位。</span></p><h3><a name="文件打开" class="md-header-anchor"></a><span>文件打开</span></h3><p><span>系统将文件的属性从外存复制到内存中的文件打开表中，并将该表目的索引返回给用户.</span></p><h3><a name="文件的逻辑结构和物理结构" class="md-header-anchor"></a><span>文件的逻辑结构和物理结构</span></h3><p><span>逻辑结构:这是从用户观点出发所观察到的文件组织形式，即文件是由一系列的逻辑记录组成的，是用户可以直接处理的数据及其结构，它独立于文件的物理特性。</span></p><p><span>物理结构:又称为存储结构。这是指系统将文件存储在外存上所形成的一种存储组织形式，是用户不能看见的。</span></p><h3><a name="逻辑文件的划分" class="md-header-anchor"></a><span>逻辑文件的划分</span></h3><p><span>有结构文件,无结构文件</span></p><p><span>有结构文件:顺序文件,索引文件,索引顺序文件.</span></p><ol start='' ><li><strong><span>顺序文件</span></strong><span>:串结构(记录之间的顺序和关键字无关) 顺序结构(记录之间的顺序和关键字有关)</span></li><li><strong><span>索引文件</span></strong><span>:通过建立一张索引表来存储每个记录的长度和地址,加快检索速度</span></li><li><strong><span>索引顺序文件</span></strong><span>:是顺序文件和索引文件的结合,将顺序文件的记录分为若干组,在索引表中为每一组的第一条记录建立一个索引项.各个组内记录可以无序,但组间一定有序.</span></li><li><span>直接文件（哈希文件）:通过哈希函数直接决定记录地址.</span></li></ol><h3><a name="如何提高对变长记录顺序文件的检索速度" class="md-header-anchor"></a><span>如何提高对变长记录顺序文件的检索速度？</span></h3><p><span>为变长记录文件建立一张索引表，为主文件中的每个记录在索引表中分别设置一个表项，记录指向记录的指针以及记录的长度L，索引表按关键字排序，因此其本身也是一个定长记录的顺序文件，这样就把对变长记录顺序文件的顺序检索转变为对定长记录索引文件的随机检索，从而加快对记录检索的速度，实现直接存取。</span></p><h3><a name="文件控制块" class="md-header-anchor"></a><span>文件控制块</span></h3><p><span>文件控制块是存放控制文件所需信息的数据结构，主要信息有：</span></p><ol start='' ><li><span>文件的基本信息。文件名，文件物理位置</span></li><li><span>存储控制信息。文件的读写权限</span></li><li><span>使用信息。修改时间，创建时间 </span></li></ol><h3><a name="索引节点" class="md-header-anchor"></a><span>索引节点</span></h3><p><span>将文件的描述信息放入索引节点中，目录项仅由文件名和对应索引节点的地址构成</span></p><p><span>提高了对目录的检索速度</span></p><h3><a name="目录管理的要求" class="md-header-anchor"></a><span>目录管理的要求</span></h3><ol start='' ><li><span>实现“按名存取”</span></li><li><span>提高对目录的检索速度</span></li><li><span>能够支持文件共享</span></li><li><span>允许文件重名</span></li></ol><h3><a name="目录结构" class="md-header-anchor"></a><span>目录结构</span></h3><ol start='' ><li><strong><span>单级目录</span></strong><span>：在整个文件系统中只建立一张目录表，每个文件对应一个目录项 查找速度慢，不允许文件重名，不利于文件共享</span></li><li><strong><span>两级目录</span></strong><span>：将文件目录分为主文件目录和用户文件目录 不同用户的文件可以重名 但是两级目录结构缺乏灵活性，不能对文件分类</span></li><li><strong><span>多级目录</span></strong><span>：两级目录的推广  能够很方便地对文件进行分类，目录结构清晰，不同目录下的文件可以重名  但是在搜索文件时，需要不断读取下一级的文件目录，增加了访问磁盘的次数</span></li><li><strong><span>有向无环图目录</span></strong><span>：在树型目录的基础上加入了指向同一节点的有向边。便于文件共享。但是使系统的管理变得更加复杂</span></li></ol><h3><a name="目前广泛采用的目录结构形式是哪种它有什么优点" class="md-header-anchor"></a><span>目前广泛采用的目录结构形式是哪种？它有什么优点？</span></h3><p><span>树形结构目录。明显提高了对目录的检索速度和文件系统的性能；同时可以很方便地对文件进行分类，层次结构清晰，也能有效地进行文件的管理和保护。</span></p><h3><a name="目录查询技术" class="md-header-anchor"></a><span>目录查询技术</span></h3><ol start='' ><li><span>线性检索法。利用用户提供的文件名，用顺序查找法从文件目录中找到该文件的目录项。</span></li><li><span>哈希方法。利用用户提供的文件名，并将它变为文件目录的索引值，再利用该索引值到目录中去查找，这样可以显著地提高检索速度</span></li></ol><h3><a name="在hash检索法中如何解决冲突问题" class="md-header-anchor"></a><span>在Hash检索法中，如何解决“冲突”问题？</span></h3><p><span>如果在目录表的相应目录项中的文件名与指定文件名并不匹配，则表示发生了“冲突”，此时须将其Hash值再加上一个常数（该常数与目录的长度值互质），形成新的索引值，再返回到第一步重新开始寻找。</span></p><h3><a name="共享文件的方法" class="md-header-anchor"></a><span>共享文件的方法</span></h3><ol start='' ><li><span>基于索引节点的共享方式  采用索引节点的方式，目录项只保留文件名和索引节点地址，索引节点中有共享计数器，用来记录指向该文件的用户目录项的个数。</span></li><li><span>利用符号链实现文件共享  只有文件主才拥有指向该文件索引节点的指针，共享者只拥有该文件的路径名</span></li></ol><h3><a name="基于索引结点的文件共享方式有何优点" class="md-header-anchor"></a><span>基于索引结点的文件共享方式有何优点？</span></h3><p><span>优点是建立新的共享链接时，不改变文件拥有者关系，仅把索引结点共享计数器加1，系统可获悉了由多少个目录项指向该文件。缺点是拥有者不能删除自己的文件否则会出错。</span></p><h3><a name="基于符号链的文件共享方式有何优点" class="md-header-anchor"></a><span>基于符号链的文件共享方式有何优点？</span></h3><p><span>在利用符号链方式实现文件共享时，只是文件主才拥有指向其索引结点的指针；而共享该文件的其他用户则只有该文件的路径名，并不拥有指向其索引结点的指针。这样，就不会发生在文件主删除一共享文件后留下一悬空指针的情况。</span></p><h3><a name="文件保护" class="md-header-anchor"></a><span>文件保护</span></h3><p><span>文件保护通过</span><strong><span>口令保护</span></strong><span>，</span><strong><span>加密保护</span></strong><span>和</span><strong><span>访问控制</span></strong><span>等方式实现</span></p><p><span>访问控制：为每个文件增加一张访问控制表，以记录每个用户的访问权限</span></p><h2><a name="42-文件系统的实现" class="md-header-anchor"></a><span>4.2 文件系统的实现</span></h2><h3><a name="文件系统层次结构" class="md-header-anchor"></a><span>文件系统层次结构</span></h3><p><strong><span>用户调用接口</span></strong><span>：为用户提供与文件及目录有关的调用</span></p><p><strong><span>文件目录系统</span></strong><span>：管理文件目录，管理用户进程的打开文件表</span></p><p><strong><span>存取控制验证模块</span></strong><span>：实现文件保护功能，检查用户访问权限以确保合法性</span></p><p><strong><span>逻辑文件系统与文件信息缓冲区</span></strong><span>：根据文件的逻辑结构将用户要读写的逻辑记录转换成文件逻辑结构内的相应块号</span></p><p><strong><span>物理文件系统</span></strong><span>：把逻辑记录所在的相应块号转换成实际的物理地址</span></p><p><strong><span>辅助分配模块&amp;设备管理程序模块</span></strong><span>：分配设备，启动设备，分配缓冲区</span></p><h3><a name="文件分配方式" class="md-header-anchor"></a><span>文件分配方式</span></h3><p><strong><span>连续分配</span></strong><span>：每个文件在磁盘上占有一组连续的块 </span></p><ol start='' ><li><span>优点 支持顺序访问和随机访问 实现简单存取速度快 作业访问磁盘时需要的寻道数和时间最小 </span></li><li><span>缺点 文件不易动态增长 频繁增删会产生外部碎片</span></li></ol><p><strong><span>链接分配</span></strong><span>：采用离散的分配方式</span></p><ol start='' ><li><span>优点 增删改方便 显著提高了磁盘空间的利用率（消除了外部碎片）</span></li></ol><p><strong><span>隐式</span></strong><span> 每个目录项都会有一个指向文件首块的指针，每个文件块都有指向下一个文件块的指针，文件块可以分布在磁盘的任何位置，通过指针依次顺序访问</span></p><ol start='' ><li><span>缺点 不能直接访问 不稳定 容易发生数据丢失 指针占用一定的空间</span></li></ol><p><strong><span>显式</span></strong><span> 把用于链接文件各物理块的指针从物理块的末尾提取出来，显式地放入内存中的一张链接表中 整个磁盘设置一张 FAT</span></p><ol start='' ><li><span>系统启动后，文件分配表就会被读入内存，提高了检索速度，减少了磁盘的访问次数</span></li></ol><p><strong><span>索引分配</span></strong><span> 把每个文件的所有物理块号放在一张索引表中</span></p><p><span>优点：能够直接访问，没有外部碎片。</span></p><p><span>缺点：索引表占用一定的存储空间</span></p><p><span>索引分配的改进方案：</span></p><ol start='' ><li><span>链接方案</span></li><li><span>多层索引</span></li><li><span>混合索引</span></li></ol><h3><a name="混合索引分配" class="md-header-anchor"></a><span>混合索引分配</span></h3><p><span>将多种索引分配方式相结合的分配方式。例如，系统既采用直接地址，又采用单级索引分配方式或两级索引分配方式。</span></p><p><span>优点：能够较全面地照顾到小型、中型、大型和特大型文件。</span></p><ol start='' ><li><span>对于小文件，将它们的每个盘块地址直接放入FCB，这样就可以直接从FCB中获得该文件的盘块地址，即为直接寻址。</span></li><li><span>对于中型文件，可以采用单级索引方式，需要先从FCB中找到该文件的索引表，从中获得该文件的盘块地址，即为一次间址。</span></li><li><span>对于大型或特大型文件，可以采用两级和三级索引分配方式。</span></li></ol><h3><a name="文件存储空间管理" class="md-header-anchor"></a><span>文件存储空间管理</span></h3><ol start='' ><li><span>空闲表法 为系统外存中所有的空闲盘块建立一张空闲盘快表</span></li><li><span>空闲链表法 将磁盘上所有的空闲盘块链接起来组成一个链表</span></li><li><span>位示图法 利用二进制的一位来表示磁盘中一个盘块的使用情况</span></li><li><span>成组链接法 把顺序的n个空闲盘块号保存在第一个成组链块中，其最后一个空闲盘块( 作为成组链块）则用于保存另一组空闲盘块号，如此继续，直至所有空闲盘块均予以链接。系统只需保存指向第一个成组链接块的指针</span></li></ol><h2><a name="43磁盘的组织和管理" class="md-header-anchor"></a><span>4.3磁盘的组织和管理</span></h2><h3><a name="如何改善磁盘系统的性能" class="md-header-anchor"></a><span>如何改善磁盘系统的性能</span></h3><ol start='' ><li><span>首先可通过选择好的磁盘调度算法，以减少磁盘的寻道时间</span></li><li><span>其次是提高磁盘I/O速度，以提高对文件的访问速度</span></li><li><span>第三采取冗余技术，提高磁盘系统的可靠性，建立高度可靠的文件系统</span></li></ol><h3><a name="磁盘读写时间构成" class="md-header-anchor"></a><span>磁盘读写时间构成</span></h3><p><span>一次磁盘读写操作的时间构成</span></p><ol start='' ><li><span>寻道时间 磁头移动到指定磁道所需要的时间</span></li><li><span>旋转延迟时间 1/2*r 磁头定位到某一磁道的扇区所需要的时间</span></li><li><span>传输时间 从磁盘读出或写入数据所经历的时间</span></li></ol><h3><a name="磁盘调度算法" class="md-header-anchor"></a><span>磁盘调度算法</span></h3><p><img src="img/屏幕截图 2022-09-05 230716.png" referrerpolicy="no-referrer" alt="屏幕截图 2022-09-05 230716"></p><h3><a name="目前常用的磁盘调度算法有哪几种每种算法优先考虑的问题是什么" class="md-header-anchor"></a><span>目前常用的磁盘调度算法有哪几种？每种算法优先考虑的问题是什么？</span></h3><ol><li><span>先来先服务算法优先考虑进程请求访问磁盘的先后次序</span></li><li><span>最短寻道时间优先算法优先考虑要求访问的磁道与当前磁头所在磁道距离是否最近</span></li><li><span>扫描算法考虑欲访问的磁道与当前磁道间的距离，更优先考虑磁头当前的移动方向。</span></li></ol><h3><a name="何谓磁盘高速缓存在设计磁盘高速缓存时需要考虑哪些问题" class="md-header-anchor"></a><span>何谓磁盘高速缓存？在设计磁盘高速缓存时需要考虑哪些问题？</span></h3><p><span>磁盘高速缓存是指在内存中为磁盘盘块设置的一个缓冲区，在缓冲区中保存了某些盘块的副本。要考虑的问题有：</span></p><p><img src="img/屏幕截图 2022-09-06 093202.png" referrerpolicy="no-referrer" alt="屏幕截图 2022-09-06 093202"></p><h3><a name="磁盘高速缓存" class="md-header-anchor"></a><span>磁盘高速缓存</span></h3><p><span>磁盘高速缓存，是指在内存中为磁盘盘块设置的一个缓冲区，在缓冲区中保存了某些盘块的副本。当出现一个访问磁盘的请求时，先去查看磁盘高速缓冲器，看所请求的盘块内容是否已在磁盘高速缓存中，如果在，便可从磁盘高速缓存中去获取，这样就省去了启动磁盘操作，而且可使本次访问速度提高几个数量级。如果不在，才需要启动磁盘将所需要的盘块内容读入，并把所需盘块内容送给磁盘高速缓存，以便以后又需要访问该盘块的数据时，便可直接从高速缓存中提取。</span></p><h3><a name="如何将磁盘高速缓存中的数据传送给进程数据交付方式）" class="md-header-anchor"></a><span>如何将磁盘高速缓存中的数据传送给进程（数据交付方式）</span></h3><ol start='' ><li><span>数据交付，这是直接将高速缓存中的数据传送到请求者进程的内存工作区中</span></li><li><span>指针交付，只将指向高速缓存中某区域的指针交付给请求者进程。</span></li></ol><h3><a name="如何选择磁盘高速缓存的调度算法" class="md-header-anchor"></a><span>如何选择磁盘高速缓存的调度算法</span></h3><p><span>较为常用的算法仍然是最近最久未使用算法LRU，最近未使用算法NRU（时钟置换算法）等。除此之外还要考虑一下几点：</span></p><ol start='' ><li><span>访问频率</span></li><li><span>可预见性</span></li><li><span>数据的一致性</span></li></ol><h3><a name="已修改的盘块数据在何时被写回磁盘" class="md-header-anchor"></a><span>已修改的盘块数据在何时被写回磁盘</span></h3><p><span>系统中专门增设了一个修改程序，使之在后台运行，该程序周期性地调用一个系统调用SYNC。其主要功能是强制性地将所有在高速缓存中已修改的盘块数据写回磁盘。</span></p><h3><a name="数据的一致性" class="md-header-anchor"></a><span>数据的一致性</span></h3><p><span>保存在多个文件中的统一数据，在任何情况下都必须能保证相同</span></p><h3><a name="事务的定义和特性" class="md-header-anchor"></a><span>事务的定义和特性</span></h3><p><span>事务是用于访问和修改各种数据项的一个程序单位。事务也可以被看做是一系列相关读和写操作。</span></p><p><span>特性：ACID</span></p><ol start='' ><li><span>原子性(Atomic) 一个事务在对一批数据执行修改操作时，应该是要么全部完成，并用修改后的数据去代替原来的数据，要么一个也不修改。</span></li><li><span>一致性(Consistent)， 即事务在完成时，必须使所有的数据都保持一致状</span>
+<span>态</span></li><li><span>隔离性(Isolated)， 即对一个事务对数据所作的修改，必须与任何其它与之并发事务相隔离。换言之，一个事务查看数据时数据所处的状态，要么是另一并发事务修改它之前的状态，要么是另一事务修改它之后的状态，而不会是任何中间状态的数据</span></li><li><span>持久性(Durable)， 即事务完成之后，它对于系统的影响是永久性的。</span></li></ol><h3><a name="并发控制" class="md-header-anchor"></a><span>并发控制</span></h3><p><span>在多用户系统和计算机网络环境下，可能有多个用户在同时执行事务。由于事务具有</span>
+<span>原子性，这使各个事务的执行必然是按某种次序依次进行的，只有在一个事务执行完后，才允许另一事务执行，即各事务对数据项的修改是互斥的。人们把这种特性称为顺序性，而把用于实现事务顺序性的技术称为并发控制。</span></p><h3><a name="并发控制有哪些方法" class="md-header-anchor"></a><span>并发控制有哪些方法？</span></h3><ol><li><span>利用互斥锁实现顺序性</span></li><li><span>利用互斥锁和共享锁实现顺序性</span></li></ol><p>&nbsp;</p><h1><a name="5-io管理" class="md-header-anchor"></a><span>5 IO管理</span></h1><h3><a name="io系统的层次结构及功能" class="md-header-anchor"></a><span>IO系统的层次结构及功能</span></h3><ol><li><span>用户层IO软件 用于实现用户与I/O设备交互</span></li><li><span>设备独立性软件 用于实现用户程序与设备驱动器的统一接口、设备命令、设备保护，以及设备分配与释放等。</span></li><li><span>设备驱动程序 与硬件直接有关，用来具体实现系统对设备发出的操作指令，驱动I/O设备工作</span></li><li><span>中断处理程序 用于保存被中断进程的CPU环境，转入相应的中断处理程序进行处理，处理完后恢复现场，并返回到被中断的进程</span></li><li><span>硬件</span></li></ol><h3><a name="试说明io系统的基本功能" class="md-header-anchor"></a><span>试说明IO系统的基本功能</span></h3><p><span>隐藏物理设备的细节、与设备的无关性、提高处理机和I/O设备的利用率、对I/O设备进行控制、确保对设备的正确共享、错误处理</span></p><h3><a name="什么是中断处理程序" class="md-header-anchor"></a><span>什么是中断处理程序</span></h3><p><span>当有I0设备发来中断请求信号时，在中断硬件做了初步处理后，便转向中断处理程序。它首先保存被中断进程的CPU环境，然后转入相应设备的中断处理程序进行处理，在处理完成后，又恢复被中断进程的CPU环境，返回断点继续运行。</span></p><h3><a name="什么是设备驱动程序" class="md-header-anchor"></a><span>什么是设备驱动程序</span></h3><p><span>它处于I/O系统的次底层，是进程和设备控制器之间的通信程序，其主要功能是，将上层发来的抽象I/O请求转换为对I/O设备的具体命令和参数，并把它装入到设备控制器中的命令和参数寄存器中。</span></p><h3><a name="设备驱动程序的主要任务" class="md-header-anchor"></a><span>设备驱动程序的主要任务</span></h3><p><span>其主要任务是接收上层软件发来的抽象I/O要求，如read或write命令，再把它转换为具体要求后，发送给设备控制器，启动设备去执行。</span></p><h3><a name="设备驱动程序的功能" class="md-header-anchor"></a><span>设备驱动程序的功能</span></h3><ol><li><span>接收由与设备无关的软件发来的命令和参数</span></li><li><span>检查用户I0请求的合法性，了解I/0设备的工作状态</span></li><li><span>发出I/O命令，如果设备空闲，便立即启动I/O设备，完成指定的I/O操作;如果</span>
+<span>设备忙碌，则将请求者的请求块挂在设备队列上等待。</span></li><li><span>及时响应由设备控制器发来的中断请求，并根据其中断类型，调用相应的中断处</span>
+<span>理程序进行处理。</span></li></ol><h3><a name="io控制方式" class="md-header-anchor"></a><span>IO控制方式</span></h3><ol><li><span>程序直接控制方式  计算机从外部设备读取的每个字，CPU需要对外设状态进行循环检查，直到确定该字已经在I/O控制器的数据寄存器中。</span></li><li><span>中断驱动方式  IO 控制器从CPU接收一个读命令，然后从外部设备读数据。一旦数据读入I/O0控制器的数据寄存器，便通过控制线给CPU发出中断信号，表示数据已准备好，然后等待CPU请求该数据。I/O 控制器收到CPU发出的取数据请求后，将数据放到数据总线上，传到CPU的寄存器中。</span></li><li><span>DMA方式  在IO设备和内存之间开辟直接的数据交换通路，彻底释放CPU。数据传送的基本单位是数据块，所传送的数据是从设备直接到内存，仅在一个或多个数据块开始和结束时，才需要CPU干预。数据块的传送是在DMA控制器控制下完成的</span></li><li><span>通道控制方式 IO通道是指专门负贵输入/输出的处理机。I/O通道方式是DMA方式的发展，它可以进一步减少CPU的干预，即把对一个数据块的读(或写)为单位的干预，减少为对一-组数据块的读(或写)及有关控制和管理为单位的干预。</span></li></ol><h3><a name="dma方式和中断方式的主要区别" class="md-header-anchor"></a><span>DMA方式和中断方式的主要区别</span></h3><p><span>DMA方式与中断方式的主要区别是：</span></p><ol><li><span>中断方式在每个数据需要传输时中断CPU，而DMA方式则是在所要求传送的一批数据全部传送结束时才中断CPU</span></li><li><span>中断方式的数据传送是在中断处理时由CPU控制完成的，而DMA方式则是在DMA控制器的控制下完成的。</span></li></ol><h3><a name="io通道与dma方式的区别" class="md-header-anchor"></a><span>I/O通道与DMA方式的区别</span></h3><ol><li><span>DMA方式需要CPU来控制传输的数据块大小、传输的内存位置，而通道方式中这些信息是由通道控制的。</span></li><li><span>每个DMA控制器对应一台设备与内存传递数据，而一个通道可以控制多台设备与内存的数据交换。</span></li></ol><h3><a name="试说明i0控制发展的主要推动因素是什么" class="md-header-anchor"></a><span>试说明I/0控制发展的主要推动因素是什么？</span></h3><p><span>促使I/0控制不断发展的几个主要因素如下：</span></p><ol><li><span>尽量减少CPU对I/O控制的干预，把CPU从繁杂的I/O控制中解脱出来，以便更多地去完成数据处理任务。</span></li><li><span>缓和CPU的高速性和设备的低速性之间速度不匹配的矛盾，以提高CPU的利用率和系统的吞吐量。</span></li><li><span>提高CPU和I/O设备操作的并行程度，使CPU和I/O设备都处于忙碌状态，从而提高整个系统的资源利用率和系统吞吐量。</span></li></ol><h3><a name="有哪几种io控制方式各适用于何种场合" class="md-header-anchor"></a><span>有哪几种I/O控制方式？各适用于何种场合？</span></h3><ol><li><span>程序I/O方式：适用于早期的计算机系统中，并且是无中断的计算机系统；</span></li><li><span>中断驱动I/O控制方式：普遍用于现代的计算机系统中；</span></li><li><span>DMA I/O控制方式：适用于I/O设备为块设备时在和主机进行数据交换的一种I/O控制方式；</span></li><li><span>I/O通道控制方式：当I/O设备和主机进行数据交换是一组数据块时通常采用I/O通道控制方式，但此时要求系统必须配置相应的通道及通道控制器。</span></li></ol><h3><a name="试说明dma的工作流程" class="md-header-anchor"></a><span>试说明DMA的工作流程</span></h3><p><img src="img/屏幕截图 2022-09-06 100708.png" referrerpolicy="no-referrer" alt="屏幕截图 2022-09-06 100708"></p><h3><a name="什么是设备控制器主要功能是什么" class="md-header-anchor"></a><span>什么是设备控制器？主要功能是什么？</span></h3><p><span>执行控制IO的电子部件称为设备控制器，控制一个或多个IO设备，以实现IO设备和计算机之间的数据交换</span></p><p><span>主要功能如下：</span></p><ol><li><span>接受和识别命令</span></li><li><span>数据交换</span></li><li><span>标识和报告设备的状态</span></li><li><span>地址识别</span></li><li><span>数据缓冲区</span></li><li><span>差错控制</span></li></ol><h3><a name="设备控制器的组成" class="md-header-anchor"></a><span>设备控制器的组成</span></h3><ol><li><span>设备控制器与处理机的接口。该接口用于实现CPU和设备控制器之间的通信</span></li><li><span>设备控制器与设备的结构。该接口用于实现设备和设备控制器之间的通信，并且一个设备控制器可以控制多个设备</span></li><li><span>IO逻辑。IO逻辑用于实现对设备的控制</span></li></ol><h3><a name="设备无关性的基本含义是什么为什么要设置该层" class="md-header-anchor"></a><span>设备无关性的基本含义是什么？为什么要设置该层？</span></h3><p><span>应用程序独立于具体使用的物理设备。为了实现设备独立性而引入了逻辑设备和物理设备两概念。在应用程序中，使用逻辑设备名称来请求使用某类设备；而系统在实际执行时，还必须使用物理设备名称。</span></p><p><span>为了提高OS的可适应性和可扩展性，在现代OS中都毫无例外地实现了设备独立性，也称设备无关性。</span></p><h3><a name="设备独立性的优点" class="md-header-anchor"></a><span>设备独立性的优点</span></h3><ol><li><span>方便用户编程</span></li><li><span>使程序运行不受具体机器环境的限制</span></li><li><span>便于程序移植</span></li></ol><h3><a name="使用逻辑设备名的好处" class="md-header-anchor"></a><span>使用逻辑设备名的好处</span></h3><p><span>使用逻辑设备名的好处是</span></p><ol><li><span>增加设备分配的灵活性</span></li><li><span>易于实现IO重定向</span></li></ol><h3><a name="设备分配的原则" class="md-header-anchor"></a><span>设备分配的原则</span></h3><p><span>设备分配应根据设备特性、用户要求和系统配置情况。既要充分发挥设备的使用效率，又要避免造成进程死锁，还要将用户程序和具体设备隔离开。</span></p><h3><a name="设备分配方式" class="md-header-anchor"></a><span>设备分配方式</span></h3><p><span>设备分配方式有静态分配和动态分配两种。</span></p><ol><li><span>静态分配主要用于对独占设备的分配，它在用户作业开始执行前，由系统一次性分配该作业所要求的全部设备、控制器。一旦分配， 这些设备、控制器就一直为 该作业所占用，直到该作业被撤销。静态分配方式不会出现死锁，但设备的使用效率低。</span></li><li><span>动态分配在进程执行过程中根据执行需要进行。当进程需要设备时，通过系统调用命令向系统提出设备请求，由系统按某种策略给进程分配所需要的设备和控制器。有利于提高设备的利用率，但若分配算法使用不当，可能会造成死锁</span></li></ol><h3><a name="设备映射表" class="md-header-anchor"></a><span>设备映射表</span></h3><p><span>建立逻辑设备和物理设备的对应关系</span></p><h3><a name="spooling技术的组成假脱机技术" class="md-header-anchor"></a><span>Spooling技术的组成（假脱机技术</span></h3><ol><li><span>输入井和输出井。这是在外存上开辟出的两个存储空间</span></li><li><span>输入缓冲区和输出缓冲区。这是在内存中开辟的两个缓冲区，用于缓和CPU和磁盘之间速度不匹配的矛盾</span></li><li><span>输入进程和输出进程。输入进程也称为预输入进程，用于模拟脱机输入时的外围</span>
+<span>控制机，将用户要求的数据从输入设备传送到输入缓冲区，再存放到输入井。</span></li><li><span>井管理程序。用于控制作业与磁盘井之间信息的交换</span></li></ol><h3><a name="spooling技术的特点" class="md-header-anchor"></a><span>SPOOLing技术的特点</span></h3><ol><li><span>提高了IO的 速度</span></li><li><span>将独占设备改造为共享设备</span></li><li><span>实现了虚拟设备功能</span></li></ol><h3><a name="何谓设备虚拟实现设备虚拟式所依赖的关键技术是什么" class="md-header-anchor"></a><span>何谓设备虚拟？实现设备虚拟式所依赖的关键技术是什么？</span></h3><p><span>通过虚拟技术可将一台独占设备变换成若干台逻辑设备，供若干个用户（进程）同时使用，通常把这种经过虚拟技术处理后的设备称为虚拟设备。其实现所依赖的关键技术是SPOOLING技术。</span></p><h3><a name="假脱机系统向用户提供共享打印机的基本思想是什么" class="md-header-anchor"></a><span>假脱机系统向用户提供共享打印机的基本思想是什么？</span></h3><p><span>对每个用户而言，系统并非即时执行其程序输出数据的真实打印操作，而只是即时将数据输出到缓冲区，这时的数据并未真正被打印，只是让用户感觉系统已为他打印；真正的打印操作，是在打印机空闲且该打印任务在等待队列中已排到队首时进行的；以上过程是对用户屏蔽的，用户是不可见的。</span></p><h3><a name="引入缓冲的主要原因是什么" class="md-header-anchor"></a><span>引入缓冲的主要原因是什么？</span></h3><ol><li><span>缓和CPU与I/0设备之间速度不匹配的矛盾</span></li><li><span>减少对CPU的中断频率</span></li><li><span>放宽对中断响应时间的限制</span></li><li><span>解决数据力度不匹配的问题</span></li><li><span>提高CPU和I/0设备之间的并行性。</span></li></ol><p>&nbsp;</p></div>
+</body>
+</html>
