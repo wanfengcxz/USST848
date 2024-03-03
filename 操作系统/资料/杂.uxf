@@ -1,0 +1,4277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>15</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>555</x>
+      <y>1290</y>
+      <w>90</w>
+      <h>435</h>
+    </coordinates>
+    <panel_attributes>大小
+--
+
+12KB
+
+--
+
+10KB
+
+--
+
+5KB
+
+--
+
+122KB
+
+--
+
+96KB
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>465</x>
+      <y>1290</y>
+      <w>90</w>
+      <h>435</h>
+    </coordinates>
+    <panel_attributes>序号
+--
+
+1
+
+--
+
+2
+
+--
+
+3
+
+--
+
+4
+
+--
+
+5
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>975</x>
+      <y>1290</y>
+      <w>90</w>
+      <h>435</h>
+    </coordinates>
+    <panel_attributes>大小
+--
+
+5KB
+
+--
+
+10KB
+
+--
+
+32KB
+
+--
+
+96KB
+
+--
+
+218KB
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>885</x>
+      <y>1290</y>
+      <w>90</w>
+      <h>435</h>
+    </coordinates>
+    <panel_attributes>序号
+--
+
+3
+
+--
+
+2
+
+--
+
+1
+
+--
+
+5
+
+--
+
+4
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>105</x>
+      <y>2115</y>
+      <w>285</w>
+      <h>405</h>
+    </coordinates>
+    <panel_attributes>halign=left
+父进程
+--
+void fork_2(){
+  pid_t pid;
+  pid=fork();
+  if (pid==0){
+    // ...
+  } else {
+    // ....
+  }
+}
+
+int main(){
+  cout&lt;&lt;"this is main process";
+  fork_2();
+  return 0;
+}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>2175</y>
+      <w>135</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>750</x>
+      <y>1920</y>
+      <w>285</w>
+      <h>405</h>
+    </coordinates>
+    <panel_attributes>halign=left
+父进程
+--
+void fork_2(){
+  pid_t pid;
+  pid=fork();
+  if (pid==0){
+    // ...
+  } else {
+    // ....
+  }
+}
+
+int main(){
+  cout&lt;&lt;"this is main process";
+  fork_2();
+  return 0;
+}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>750</x>
+      <y>2340</y>
+      <w>285</w>
+      <h>405</h>
+    </coordinates>
+    <panel_attributes>halign=left
+子进程
+--
+void fork_2(){
+  pid_t pid;
+  pid=fork();
+  if (pid==0){
+    // ...
+  } else {
+    // ....
+  }
+}
+
+int main(){
+  cout&lt;&lt;"this is main process";
+  fork_2();
+  return 0;
+}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>2010</y>
+      <w>150</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>2430</y>
+      <w>150</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>2280</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>2085</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>pid为父进程的pid</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>900</x>
+      <y>2535</y>
+      <w>90</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>pid为0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1500</x>
+      <y>2235</y>
+      <w>150</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>SimpleClass</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1275</x>
+      <y>2940</y>
+      <w>285</w>
+      <h>315</h>
+    </coordinates>
+    <panel_attributes>halign=left
+程序A
+--
+void fun(){
+    // ....
+}
+
+int main(){
+  int i = 0;
+  int j = 1;
+  cout&lt;&lt;"this is main process";
+  fun();
+  return 0;
+}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1545</x>
+      <y>2880</y>
+      <w>510</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+引发IO中断 关中断，
+保存下一条指令地址
+保存现场，中断服务程序寻址
+关中断</panel_attributes>
+    <additional_attributes>320.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2025</x>
+      <y>2895</y>
+      <w>285</w>
+      <h>255</h>
+    </coordinates>
+    <panel_attributes>halign=left
+中断服务程序
+--
+void interrupt_processor(){
+    // ....
+
+
+
+    
+    return 0;
+}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1545</x>
+      <y>3075</y>
+      <w>510</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+
+关中断
+恢复现场
+开中断
+</panel_attributes>
+    <additional_attributes>10.0;50.0;320.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1170</x>
+      <y>3150</y>
+      <w>135</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1575</x>
+      <y>1395</y>
+      <w>120</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>生产者1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1575</x>
+      <y>1470</y>
+      <w>120</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>生产者2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1575</x>
+      <y>1545</y>
+      <w>120</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>生产者3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1575</x>
+      <y>1620</y>
+      <w>120</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>生产者4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1785</x>
+      <y>1545</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1815</x>
+      <y>1545</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1845</x>
+      <y>1545</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1875</x>
+      <y>1545</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1905</x>
+      <y>1545</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1935</x>
+      <y>1545</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2040</x>
+      <y>1395</y>
+      <w>120</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>消费者1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2040</x>
+      <y>1470</y>
+      <w>120</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>消费者2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2040</x>
+      <y>1545</y>
+      <w>120</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>消费者3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2040</x>
+      <y>1620</y>
+      <w>120</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>消费者4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2295</x>
+      <y>1890</y>
+      <w>105</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>读者1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2295</x>
+      <y>1965</y>
+      <w>105</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>读者2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2295</x>
+      <y>2040</y>
+      <w>105</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>读者3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2295</x>
+      <y>2115</y>
+      <w>105</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>读者4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1830</x>
+      <y>1890</y>
+      <w>105</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>写者1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1830</x>
+      <y>1965</y>
+      <w>105</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>写者2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1830</x>
+      <y>2040</y>
+      <w>105</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>写者3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1830</x>
+      <y>2115</y>
+      <w>105</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>写者4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2040</x>
+      <y>1950</y>
+      <w>150</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>
+
+文件</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1890</x>
+      <y>2415</y>
+      <w>105</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>供应者</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2220</x>
+      <y>2325</y>
+      <w>105</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>抽烟者1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2220</x>
+      <y>2415</y>
+      <w>105</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>抽烟者2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2220</x>
+      <y>2505</y>
+      <w>105</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>抽烟者3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2610</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2640</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2670</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2700</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2730</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2760</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2790</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2820</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2835</x>
+      <y>1575</y>
+      <w>45</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2850</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2880</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2910</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2940</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2970</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3000</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3030</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3060</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3075</x>
+      <y>1575</y>
+      <w>45</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3090</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3120</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3150</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3180</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3210</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3240</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3270</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3300</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3315</x>
+      <y>1575</y>
+      <w>45</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3330</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3360</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3390</x>
+      <y>1620</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2985</x>
+      <y>2175</y>
+      <w>150</w>
+      <h>195</h>
+    </coordinates>
+    <panel_attributes>程序员 小王
+--
+应用程序A_1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2985</x>
+      <y>2415</y>
+      <w>150</w>
+      <h>195</h>
+    </coordinates>
+    <panel_attributes>程序员 小黑
+--
+应用程序A_2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3300</x>
+      <y>1995</y>
+      <w>150</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>内存条1
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3300</x>
+      <y>2370</y>
+      <w>150</w>
+      <h>345</h>
+    </coordinates>
+    <panel_attributes>内存条2
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3315</x>
+      <y>2040</y>
+      <w>120</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3315</x>
+      <y>2130</y>
+      <w>120</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3315</x>
+      <y>2220</y>
+      <w>120</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3315</x>
+      <y>2430</y>
+      <w>120</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3315</x>
+      <y>2520</y>
+      <w>120</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3315</x>
+      <y>2610</y>
+      <w>120</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2820</x>
+      <y>2880</y>
+      <w>120</w>
+      <h>285</h>
+    </coordinates>
+    <panel_attributes>CPU</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3120</x>
+      <y>2880</y>
+      <w>120</w>
+      <h>285</h>
+    </coordinates>
+    <panel_attributes>内存</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2925</x>
+      <y>2895</y>
+      <w>225</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2925</x>
+      <y>2925</y>
+      <w>225</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2925</x>
+      <y>2955</y>
+      <w>225</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2925</x>
+      <y>2985</y>
+      <w>225</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2925</x>
+      <y>3015</y>
+      <w>225</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2925</x>
+      <y>3105</y>
+      <w>225</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2925</x>
+      <y>3075</y>
+      <w>225</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2925</x>
+      <y>3045</y>
+      <w>225</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2790</x>
+      <y>3405</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2820</x>
+      <y>3405</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2850</x>
+      <y>3405</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2880</x>
+      <y>3405</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2910</x>
+      <y>3405</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2940</x>
+      <y>3405</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2970</x>
+      <y>3405</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3000</x>
+      <y>3405</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3030</x>
+      <y>3405</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3060</x>
+      <y>3405</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3090</x>
+      <y>3405</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3120</x>
+      <y>3405</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3150</x>
+      <y>3405</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3180</x>
+      <y>3405</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3210</x>
+      <y>3405</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3240</x>
+      <y>3405</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3255</x>
+      <y>3360</y>
+      <w>45</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3270</x>
+      <y>3405</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3300</x>
+      <y>3405</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3330</x>
+      <y>3405</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3360</x>
+      <y>3405</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2835</x>
+      <y>3690</y>
+      <w>90</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>程序A
+--
+
+
+
+
+--
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2850</x>
+      <y>3795</y>
+      <w>270</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>0000000000000001|0000</panel_attributes>
+    <additional_attributes>50.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2850</x>
+      <y>3930</y>
+      <w>270</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>0000000000000001|0000</panel_attributes>
+    <additional_attributes>50.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2925</x>
+      <y>3735</y>
+      <w>270</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>第一个段地址 0|0-0|1111</panel_attributes>
+    <additional_attributes>50.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2925</x>
+      <y>3855</y>
+      <w>270</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>第一个段地址 1|0-1|1111</panel_attributes>
+    <additional_attributes>50.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3240</x>
+      <y>3705</y>
+      <w>135</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>段寄存器cs</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3495</x>
+      <y>3645</y>
+      <w>120</w>
+      <h>450</h>
+    </coordinates>
+    <panel_attributes>物理内存</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3690</x>
+      <y>2235</y>
+      <w>150</w>
+      <h>195</h>
+    </coordinates>
+    <panel_attributes>程序员 小王
+--
+应用程序A_1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4080</x>
+      <y>2310</y>
+      <w>120</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4080</x>
+      <y>2400</y>
+      <w>120</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4080</x>
+      <y>2220</y>
+      <w>120</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4065</x>
+      <y>2175</y>
+      <w>150</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>内存条1
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3825</x>
+      <y>2295</y>
+      <w>285</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+程序员指定物理地址</panel_attributes>
+    <additional_attributes>170.0;30.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5235</x>
+      <y>2430</y>
+      <w>120</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5235</x>
+      <y>2520</y>
+      <w>120</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5235</x>
+      <y>2340</y>
+      <w>120</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5220</x>
+      <y>2295</y>
+      <w>150</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>内存条1
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4530</x>
+      <y>2340</y>
+      <w>165</w>
+      <h>195</h>
+    </coordinates>
+    <panel_attributes>程序员 小王
+--
+应用程序A_1
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>4680</x>
+      <y>2400</y>
+      <w>255</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+每个进程独占全部
+的虚拟内存空间</panel_attributes>
+    <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4905</x>
+      <y>2235</y>
+      <w>135</w>
+      <h>435</h>
+    </coordinates>
+    <panel_attributes>虚拟内存空间
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>5025</x>
+      <y>2400</y>
+      <w>225</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+操作系统的
+MMU单元来映射</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4005</x>
+      <y>1425</y>
+      <w>495</w>
+      <h>465</h>
+    </coordinates>
+    <panel_attributes>CPU</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4035</x>
+      <y>1500</y>
+      <w>150</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>ALU </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4035</x>
+      <y>1665</y>
+      <w>165</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Register</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4050</x>
+      <y>1725</y>
+      <w>135</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>rax(8B)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4050</x>
+      <y>1800</y>
+      <w>135</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>rsi</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4260</x>
+      <y>1500</y>
+      <w>210</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>cache</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4275</x>
+      <y>1560</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>cache line1(64B)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4275</x>
+      <y>1635</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>cache line2(64B)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4275</x>
+      <y>1710</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>cache line3(64B)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4275</x>
+      <y>1785</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>cache line4(64B)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4680</x>
+      <y>1680</y>
+      <w>150</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>MMU</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4950</x>
+      <y>1260</y>
+      <w>210</w>
+      <h>600</h>
+    </coordinates>
+    <panel_attributes>物理内存</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4665</x>
+      <y>1185</y>
+      <w>180</w>
+      <h>420</h>
+    </coordinates>
+    <panel_attributes>虚拟地址
+
+                  
+                0x100</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4680</x>
+      <y>1230</y>
+      <w>90</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>arr
+--
+arr[0]
+--
+arr[1]
+--
+arr[2]
+--
+arr[3]
+--
+arr[4]
+--
+arr[5]
+--
+arr[6]
+--
+arr[7]
+--
+arr[8]
+--
+arr[9]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4245</x>
+      <y>1215</y>
+      <w>285</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>代码
+int sum = 0;
+int arr[32];
+for(int i = 0;i&lt;32;i++)
+	sum += arr[i];</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5010</x>
+      <y>1530</y>
+      <w>90</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>arr[1]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5010</x>
+      <y>1320</y>
+      <w>90</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>arr[0]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5010</x>
+      <y>1710</y>
+      <w>90</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>arr[2]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5295</x>
+      <y>1470</y>
+      <w>495</w>
+      <h>465</h>
+    </coordinates>
+    <panel_attributes>CPU</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5325</x>
+      <y>1545</y>
+      <w>150</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>ALU </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5325</x>
+      <y>1710</y>
+      <w>165</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Register</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5340</x>
+      <y>1770</y>
+      <w>135</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>rax(8B)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5340</x>
+      <y>1845</y>
+      <w>135</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>rsi</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5550</x>
+      <y>1545</y>
+      <w>210</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>cache</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5565</x>
+      <y>1605</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>cache line1(64B)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5565</x>
+      <y>1680</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>cache line2(64B)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5565</x>
+      <y>1755</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>cache line3(64B)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5565</x>
+      <y>1830</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>cache line4(64B)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6255</x>
+      <y>1425</y>
+      <w>150</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>MMU</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6585</x>
+      <y>1260</y>
+      <w>210</w>
+      <h>600</h>
+    </coordinates>
+    <panel_attributes>物理内存</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5850</x>
+      <y>1275</y>
+      <w>330</w>
+      <h>495</h>
+    </coordinates>
+    <panel_attributes>虚拟地址</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6585</x>
+      <y>1335</y>
+      <w>210</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>A_1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6585</x>
+      <y>1650</y>
+      <w>210</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>A_2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>6075</x>
+      <y>1470</y>
+      <w>210</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>6075</x>
+      <y>1365</y>
+      <w>210</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5550</x>
+      <y>1350</y>
+      <w>165</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>(va,pa,len)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>6390</x>
+      <y>1365</y>
+      <w>225</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>6390</x>
+      <y>1500</y>
+      <w>225</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>130.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6315</x>
+      <y>1950</y>
+      <w>165</w>
+      <h>705</h>
+    </coordinates>
+    <panel_attributes>虚拟地址
+--
+
+
+
+
+
+
+
+
+
+--
+
+
+
+
+
+
+
+
+
+--
+
+？？？？？？？</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6675</x>
+      <y>2040</y>
+      <w>150</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>物理地址</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6675</x>
+      <y>2310</y>
+      <w>150</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>物理地址</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>6465</x>
+      <y>2070</y>
+      <w>240</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>140.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>6465</x>
+      <y>2295</y>
+      <w>240</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>140.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7200</x>
+      <y>1950</y>
+      <w>165</w>
+      <h>705</h>
+    </coordinates>
+    <panel_attributes>虚拟地址
+--
+
+
+
+
+
+
+
+
+
+--
+
+
+
+
+
+
+
+
+
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7650</x>
+      <y>2115</y>
+      <w>150</w>
+      <h>255</h>
+    </coordinates>
+    <panel_attributes>物理地址</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>7350</x>
+      <y>2070</y>
+      <w>330</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>200.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>7350</x>
+      <y>2235</y>
+      <w>330</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>200.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>7350</x>
+      <y>2295</y>
+      <w>330</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>200.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6840</x>
+      <y>3285</y>
+      <w>150</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>MMU</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7140</x>
+      <y>3120</y>
+      <w>270</w>
+      <h>495</h>
+    </coordinates>
+    <panel_attributes>物理内存
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6405</x>
+      <y>3090</y>
+      <w>330</w>
+      <h>495</h>
+    </coordinates>
+    <panel_attributes>虚拟地址</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6450</x>
+      <y>3195</y>
+      <w>240</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>应用程序A_1
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7140</x>
+      <y>3195</y>
+      <w>90</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>page0
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>6720</x>
+      <y>3330</y>
+      <w>150</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7140</x>
+      <y>3300</y>
+      <w>90</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>page
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7140</x>
+      <y>3405</y>
+      <w>90</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>page3
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7140</x>
+      <y>3510</y>
+      <w>90</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>page0
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6450</x>
+      <y>3255</y>
+      <w>90</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>page0
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6450</x>
+      <y>3360</y>
+      <w>90</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>page2
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6540</x>
+      <y>3255</y>
+      <w>90</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>page1
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6540</x>
+      <y>3360</y>
+      <w>90</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>page3
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7230</x>
+      <y>3195</y>
+      <w>90</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>page
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7230</x>
+      <y>3300</y>
+      <w>90</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>page
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7320</x>
+      <y>3300</y>
+      <w>90</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>page2
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7320</x>
+      <y>3195</y>
+      <w>90</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>page
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7320</x>
+      <y>3510</y>
+      <w>90</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>page
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7320</x>
+      <y>3405</y>
+      <w>90</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>page
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7230</x>
+      <y>3405</y>
+      <w>90</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>page1
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7230</x>
+      <y>3510</y>
+      <w>90</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>page
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>6975</x>
+      <y>3300</y>
+      <w>195</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4080</x>
+      <y>3690</y>
+      <w>90</w>
+      <h>495</h>
+    </coordinates>
+    <panel_attributes>程序A
+--
+
+
+
+
+
+
+
+
+
+--
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4365</x>
+      <y>3765</y>
+      <w>390</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>页表</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4365</x>
+      <y>3810</y>
+      <w>75</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4440</x>
+      <y>3810</y>
+      <w>315</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>0000 0010 0010 0110 1000</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4365</x>
+      <y>3855</y>
+      <w>75</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4440</x>
+      <y>3855</y>
+      <w>315</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>0001 0000 1110 0010 1010</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4860</x>
+      <y>3675</y>
+      <w>90</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>物理内存
+--
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4860</x>
+      <y>3960</y>
+      <w>90</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>物理内存
+--
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5145</x>
+      <y>3690</y>
+      <w>90</w>
+      <h>540</h>
+    </coordinates>
+    <panel_attributes>物理内存
+--
+
+
+
+
+
+
+
+
+
+
+
+--
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4425</x>
+      <y>4575</y>
+      <w>150</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>一级页表
+--
+
+--
+
+--
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4725</x>
+      <y>4380</y>
+      <w>150</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>二级页表
+--
+
+--
+
+--
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4740</x>
+      <y>4590</y>
+      <w>150</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>二级页表
+--
+
+--
+
+--
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4740</x>
+      <y>4785</y>
+      <w>150</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>二级页表
+--
+
+--
+
+--
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>4560</x>
+      <y>4380</y>
+      <w>195</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>4560</x>
+      <y>4590</y>
+      <w>210</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>4560</x>
+      <y>4680</y>
+      <w>210</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4305</x>
+      <y>4365</y>
+      <w>270</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>顶级页表常驻内存
+其他页表并不用常驻内存</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>4875</x>
+      <y>4620</y>
+      <w>195</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>4875</x>
+      <y>4575</y>
+      <w>195</w>
+      <h>195</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5040</x>
+      <y>4365</y>
+      <w>150</w>
+      <h>540</h>
+    </coordinates>
+    <panel_attributes>物理内存
+--
+
+
+--
+
+
+--
+
+
+--
+
+
+--
+
+
+--
+
+
+--
+
+
+--
+
+
+--
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4095</x>
+      <y>4590</y>
+      <w>240</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>逻辑地址
+--
+1|1|0000 0000 0010
+1|1|0000 0000 0011
+1|1|0000 0000 0100
+1|1|0000 0000 0101</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>4875</x>
+      <y>4470</y>
+      <w>195</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3585</x>
+      <y>240</y>
+      <w>495</w>
+      <h>465</h>
+    </coordinates>
+    <panel_attributes>CPU</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3615</x>
+      <y>315</y>
+      <w>150</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>ALU </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3615</x>
+      <y>480</y>
+      <w>165</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Register</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3630</x>
+      <y>540</y>
+      <w>135</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>rax(8B)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3630</x>
+      <y>615</y>
+      <w>135</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>rsi</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3840</x>
+      <y>315</y>
+      <w>210</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>cache</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3855</x>
+      <y>375</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>cache line1(64B)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3855</x>
+      <y>450</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>cache line2(64B)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3855</x>
+      <y>525</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>cache line3(64B)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3855</x>
+      <y>600</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>cache line4(64B)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4260</x>
+      <y>495</y>
+      <w>150</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>MMU</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4530</x>
+      <y>75</y>
+      <w>210</w>
+      <h>600</h>
+    </coordinates>
+    <panel_attributes>物理内存</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4245</x>
+      <y>0</y>
+      <w>180</w>
+      <h>420</h>
+    </coordinates>
+    <panel_attributes>虚拟地址
+
+                  
+                0x100</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4260</x>
+      <y>45</y>
+      <w>90</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>arr
+--
+arr[0]
+--
+arr[1]
+--
+arr[2]
+--
+arr[3]
+--
+arr[4]
+--
+arr[5]
+--
+arr[6]
+--
+arr[7]
+--
+arr[8]
+--
+arr[9]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3825</x>
+      <y>30</y>
+      <w>285</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>代码
+int sum = 0;
+int arr[32];
+for(int i = 0;i&lt;32;i++)
+	sum += arr[i];</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4590</x>
+      <y>150</y>
+      <w>90</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>arr
+--
+arr[0]
+--
+arr[1]
+--
+arr[2]
+--
+arr[3]
+--
+arr[4]
+--
+arr[5]
+--
+arr[6]
+--
+arr[7]
+--
+arr[8]
+--
+arr[9]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5940</x>
+      <y>1320</y>
+      <w>150</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>程序员 小黑
+--
+应用程序A_2
+
+
+
+
+
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6360</x>
+      <y>3960</y>
+      <w>120</w>
+      <h>690</h>
+    </coordinates>
+    <panel_attributes>程序A
+--
+push %rbp
+--
+mov
+--
+call
+--
+push
+--
+mov %rbx,
+--
+pop %rsp
+--
+...
+--
+...
+--
+...
+--
+...
+--
+...
+--
+...
+--
+...
+--
+...
+--
+...
+--
+...
+--
+...
+--
+...
+--
+...
+--
+...
+--
+...
+
+--
+...
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6690</x>
+      <y>4005</y>
+      <w>75</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6765</x>
+      <y>4005</y>
+      <w>315</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>0010(2)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6690</x>
+      <y>4050</y>
+      <w>75</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6765</x>
+      <y>4050</y>
+      <w>315</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>0111(7)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6690</x>
+      <y>3960</y>
+      <w>390</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>页表</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5970</x>
+      <y>4125</y>
+      <w>225</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>8位逻辑地址</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5970</x>
+      <y>4170</y>
+      <w>225</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>0000 0000-1111 1111</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5970</x>
+      <y>4215</y>
+      <w>225</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>前四位划分为页号</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5970</x>
+      <y>4260</y>
+      <w>225</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>后四位为页内偏移</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5970</x>
+      <y>4305</y>
+      <w>225</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>因此物理块和页面
+大小为16B</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6240</x>
+      <y>3960</y>
+      <w>120</w>
+      <h>690</h>
+    </coordinates>
+    <panel_attributes>逻辑地址
+--
+0000 0000
+--
+0000 0001
+--
+0000 0010
+--
+0000 0011
+--
+0000 0100
+--
+0000 0101
+--
+0000 0110
+--
+0000 0111
+--
+0000 1000
+--
+0000 1001
+--
+0000 1010
+--
+0000 1011
+--
+0000 1100
+--
+0000 1101
+--
+0000 1110
+--
+0000 1111
+--
+0001 0001
+--
+0001 0010
+--
+0001 0011
+--
+0001 0100
+--
+0001 0101
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>6345</x>
+      <y>3885</y>
+      <w>45</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>6465</x>
+      <y>3885</y>
+      <w>45</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>6345</x>
+      <y>3900</y>
+      <w>165</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>1B</panel_attributes>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7155</x>
+      <y>3750</y>
+      <w>120</w>
+      <h>570</h>
+    </coordinates>
+    <panel_attributes>物理地址
+--
+0000 0000
+--
+0000 0001
+--
+0000 0010
+--
+0000 0011
+--
+0000 0100
+--
+0000 0101
+--
+0000 0110
+--
+0000 0111
+--
+0000 1000
+--
+0000 1001
+--
+0000 1010
+--
+0000 1011
+--
+0000 1100
+--
+0000 1101
+--
+0000 1110
+--
+0000 1111
+--
+0001 0001
+--
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7275</x>
+      <y>3750</y>
+      <w>120</w>
+      <h>570</h>
+    </coordinates>
+    <panel_attributes>程序A
+--
+...
+--
+...
+--
+...
+--
+...
+--
+...
+--
+...
+--
+...
+--
+...
+--
+...
+--
+...
+--
+...
+--
+...
+--
+...
+--
+...
+--
+...
+--
+...
+--
+...
+--
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>6180</x>
+      <y>3990</y>
+      <w>90</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>40.0;20.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>6075</x>
+      <y>3975</y>
+      <w>105</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>虚拟内存</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>7020</x>
+      <y>3780</y>
+      <w>105</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>物理内存</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7275</x>
+      <y>4425</y>
+      <w>120</w>
+      <h>690</h>
+    </coordinates>
+    <panel_attributes>程序A
+--
+
+--
+
+--
+
+--
+
+--
+
+--
+
+--
+
+--
+
+--
+
+--
+
+--
+
+--
+
+--
+
+--
+
+--
+
+--
+
+--
+...
+--
+...
+--
+...
+--
+...
+--
+...
+
+--
+...
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>7155</x>
+      <y>4425</y>
+      <w>120</w>
+      <h>690</h>
+    </coordinates>
+    <panel_attributes>物理地址
+--
+0010 0000
+--
+0010 0001
+--
+0010 0010
+--
+0010 0011
+--
+0010 0100
+--
+0010 0101
+--
+0010 0110
+--
+0010 0111
+--
+0010 1000
+--
+0010 1001
+--
+0010 1010
+--
+0010 1011
+--
+0010 1100
+--
+0010 1101
+--
+0010 1110
+--
+0010 1111
+--
+0011 0001
+--
+0011 0010
+--
+0011 0011
+--
+0011 0100
+--
+0011 0101
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>7185</x>
+      <y>4335</y>
+      <w>45</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>7230</x>
+      <y>4335</y>
+      <w>45</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>7290</x>
+      <y>4335</y>
+      <w>45</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>7335</x>
+      <y>4335</y>
+      <w>45</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6570</x>
+      <y>3960</y>
+      <w>120</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>物理地址
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6570</x>
+      <y>4005</y>
+      <w>120</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>0010 0111</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6570</x>
+      <y>4050</y>
+      <w>120</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>0010 1001</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6765</x>
+      <y>4095</y>
+      <w>315</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>0101(5)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6690</x>
+      <y>4095</y>
+      <w>75</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>6570</x>
+      <y>4095</y>
+      <w>120</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>0010 1011</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>9180</x>
+      <y>2970</y>
+      <w>315</w>
+      <h>525</h>
+    </coordinates>
+    <panel_attributes>外存</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>9210</x>
+      <y>3030</y>
+      <w>135</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>程序A 1M
+页面1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>8835</x>
+      <y>3225</y>
+      <w>135</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>页面2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>9210</x>
+      <y>3180</y>
+      <w>135</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>页面3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>9210</x>
+      <y>3255</y>
+      <w>135</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>页面4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>9345</x>
+      <y>3030</y>
+      <w>135</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>页面7</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>9210</x>
+      <y>3405</y>
+      <w>135</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>页面6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>9210</x>
+      <y>3330</y>
+      <w>135</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>页面5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>9345</x>
+      <y>3105</y>
+      <w>135</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>页面8</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>9000</x>
+      <y>3195</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+取出少部分页面</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>8655</x>
+      <y>2970</y>
+      <w>360</w>
+      <h>525</h>
+    </coordinates>
+    <panel_attributes>内存</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>9345</x>
+      <y>3180</y>
+      <w>135</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>.....</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>9345</x>
+      <y>3255</y>
+      <w>135</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>.....</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>9345</x>
+      <y>3330</y>
+      <w>135</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>.....</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>9345</x>
+      <y>3405</y>
+      <w>135</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>.....</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>8835</x>
+      <y>3015</y>
+      <w>135</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>页面8</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>8835</x>
+      <y>3120</y>
+      <w>135</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>页面9</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>9210</x>
+      <y>3105</y>
+      <w>135</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>页面2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>8670</x>
+      <y>3315</y>
+      <w>330</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>页表
+--
+页号|物理块|P|外存地址|修改位M
+--
+2|13|1|123132|0
+--
+8|123|1|34132|1
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>8685</x>
+      <y>3045</y>
+      <w>135</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>.....</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>8685</x>
+      <y>3180</y>
+      <w>135</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>.....</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>8025</x>
+      <y>3015</y>
+      <w>420</w>
+      <h>465</h>
+    </coordinates>
+    <panel_attributes>CPU</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>8205</x>
+      <y>3225</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>cache line1(64B)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>8205</x>
+      <y>3285</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>cache line2(64B)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>8205</x>
+      <y>3345</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>cache line3(64B)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>8205</x>
+      <y>3405</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>cache line4(64B)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>8190</x>
+      <y>3030</y>
+      <w>210</w>
+      <h>435</h>
+    </coordinates>
+    <panel_attributes>cache</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>8055</x>
+      <y>3120</y>
+      <w>75</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>CU</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>8055</x>
+      <y>3285</y>
+      <w>75</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Reg</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>8430</x>
+      <y>3225</y>
+      <w>255</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+取出某个页面中的
+部分代码</panel_attributes>
+    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>8205</x>
+      <y>3090</y>
+      <w>180</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>快表</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>8115</x>
+      <y>3135</y>
+      <w>120</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+1</panel_attributes>
+    <additional_attributes>60.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>8115</x>
+      <y>3105</y>
+      <w>120</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+2</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>8430</x>
+      <y>3330</y>
+      <w>270</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+3</panel_attributes>
+    <additional_attributes>160.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>8430</x>
+      <y>3435</y>
+      <w>810</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+4</panel_attributes>
+    <additional_attributes>520.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>9000</x>
+      <y>3255</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+5</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>8370</x>
+      <y>3165</y>
+      <w>315</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+6</panel_attributes>
+    <additional_attributes>10.0;50.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>8115</x>
+      <y>3135</y>
+      <w>150</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+7</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>1755</x>
+      <y>960</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>DataObject</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

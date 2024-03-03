@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text>
+
+
+ // Uncomment the following line to change the fontsize and font:
+// fontsize=14
+// fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Welcome to UMLet!
+//
+// Double-click on elements to add them to the diagram, or to copy them
+// Edit elements by modifying the text in this panel
+// Hold Ctrl to select multiple elements
+// Use Ctrl+mouse to select via lasso
+//
+// Use +/- or Ctrl+mouse wheel to zoom
+// Drag a whole relation at its central square icon
+//
+// Press Ctrl+C to copy the whole diagram to the system clipboard (then just paste it to, eg, Word)
+// Edit the files in the "palettes" directory to create your own element palettes
+//
+// Select "Custom Elements &gt; New..." to create new element types
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// This text will be stored with each diagram;  use it for notes.</help_text>
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1505</x>
+      <y>252</y>
+      <w>378</w>
+      <h>378</h>
+    </coordinates>
+    <panel_attributes>&amp;外存&amp;
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>630</x>
+      <y>294</y>
+      <w>315</w>
+      <h>413</h>
+    </coordinates>
+    <panel_attributes>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CPU
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>644</x>
+      <y>329</y>
+      <w>35</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>PC</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>742</x>
+      <y>315</y>
+      <w>84</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>页表寄存器PTR
+--
+页表始址F
+--
+页表长度M</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1526</x>
+      <y>294</y>
+      <w>322</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>程序A
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1036</x>
+      <y>203</y>
+      <w>371</w>
+      <h>469</h>
+    </coordinates>
+    <panel_attributes>&amp;内存&amp;
+--
+系统区
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--
+用户区</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1092</x>
+      <y>483</y>
+      <w>98</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>程序A
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1092</x>
+      <y>294</y>
+      <w>98</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>PCB（程序A）
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1547</x>
+      <y>343</y>
+      <w>266</w>
+      <h>175</h>
+    </coordinates>
+    <panel_attributes>程序主体
+--
+(已编译链接完毕)
+程序的逻辑地址为
+从@00000000000000000000|000000000000(0)
+到@00000000000000000010|111111111111(12288)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1092</x>
+      <y>371</y>
+      <w>98</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>页表（程序A）
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1190</x>
+      <y>322</y>
+      <w>119</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0;150.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1190</x>
+      <y>392</y>
+      <w>350</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+      1 将程序读入内存 
+                 （1）先创建程序的PCB，
+           写入进程的基本信息
+              （2）以页帧为单位(4KB)
+                        从硬盘中读取4KB的程序数据
+             放入内存的一个页中，
+          	                                同时将当前的页号和页帧的实际物理地址
+写入页表中</panel_attributes>
+    <additional_attributes>10.0;20.0;480.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1190</x>
+      <y>399</y>
+      <w>119</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;180.0;150.0;180.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>819</x>
+      <y>329</y>
+      <w>287</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+2 加载页表始址和页表长度到PTR中</panel_attributes>
+    <additional_attributes>10.0;20.0;390.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>686</x>
+      <y>175</y>
+      <w>273</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>32位系统
+--
+页帧大小L：4KB
+页表项大小：4B
+--
+逻辑地址结构
+00000000000000000000|000000000000
+前16位 页号
+后12位 页内偏移</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>518</x>
+      <y>343</y>
+      <w>154</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+3对PC中的逻辑地址进行解析</panel_attributes>
+    <additional_attributes>10.0;170.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>84</x>
+      <y>546</y>
+      <w>224</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>00000000000000000010|000000000011(8195)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>427</y>
+      <w>525</w>
+      <h>266</h>
+    </coordinates>
+    <panel_attributes>地址转换详细过程(发生在CPU中)
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1421</x>
+      <y>469</y>
+      <w>28</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>20.0;180.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1309</x>
+      <y>602</y>
+      <w>357</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>注意此处的页号是隐式存储，页帧的实际物理地址是当前页帧的首字节的地址</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>84</x>
+      <y>462</y>
+      <w>224</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>00000000000000000000|000000000000(0)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>196</x>
+      <y>476</y>
+      <w>21</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>196</x>
+      <y>560</y>
+      <w>21</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>84</x>
+      <y>630</y>
+      <w>224</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>@00000000000000000011|000000000000(12288)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>322</x>
+      <y>553</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+解析</panel_attributes>
+    <additional_attributes>110.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>560</y>
+      <w>77</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>type=actclass
+页号P 2
+--
+页内偏移W 3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>315</x>
+      <y>630</y>
+      <w>84</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+解析</panel_attributes>
+    <additional_attributes>100.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>637</y>
+      <w>77</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>type=actclass
+页号 ？
+--
+页内偏移 ？</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>35</x>
+      <y>455</y>
+      <w>28</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+时
+间</panel_attributes>
+    <additional_attributes>10.0;280.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>462</y>
+      <w>203</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+4 页号与页表长度比大小，是否越界</panel_attributes>
+    <additional_attributes>240.0;10.0;90.0;150.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>658</x>
+      <y>448</y>
+      <w>49</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>type=decision
+  P&lt;M？</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>350</y>
+      <w>84</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+4</panel_attributes>
+    <additional_attributes>10.0;140.0;60.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>700</x>
+      <y>455</y>
+      <w>119</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+
+
+5 合并页表始址和页号
+计算出页表项地址</panel_attributes>
+    <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>805</x>
+      <y>462</y>
+      <w>105</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>F+P*页表项大小(4B)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>567</y>
+      <w>308</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+6 将物理块号与页内偏移
+进行拼接</panel_attributes>
+    <additional_attributes>420.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>903</x>
+      <y>399</y>
+      <w>203</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>270.0;10.0;160.0;20.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>889</x>
+      <y>413</y>
+      <w>217</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;210.0;220.0;30.0;290.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>784</x>
+      <y>560</y>
+      <w>70</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>物理块号b*L</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>854</x>
+      <y>560</y>
+      <w>70</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>页内偏移量W</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>917</x>
+      <y>539</y>
+      <w>189</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+7 访问程序的物理内存地址</panel_attributes>
+    <additional_attributes>250.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>994</x>
+      <y>798</y>
+      <w>98</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes>（进程A）
+--
+
+
+             PCB
+
+
+--
+
+
+             代码
+
+
+--
+
+
+             数据
+
+
+       </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>994</x>
+      <y>777</y>
+      <w>98</w>
+      <h>287</h>
+    </coordinates>
+    <panel_attributes>内存
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>798</y>
+      <w>98</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>程序A
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

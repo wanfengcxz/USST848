@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>297</x>
+      <y>45</y>
+      <w>90</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>对换区
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>423</x>
+      <y>45</y>
+      <w>90</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>DataObject</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>90</x>
+      <y>756</y>
+      <w>117</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>对换区（外存）
+连续分配
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>477</x>
+      <y>441</y>
+      <w>117</w>
+      <h>342</h>
+    </coordinates>
+    <panel_attributes>内存
+--
+
+--
+程序A
+--
+PCB
+--
+
+
+--
+程序A
+--
+1
+--
+4
+--
+8
+--
+
+
+--
+程序B
+--
+1
+--
+2
+--
+3
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>90</x>
+      <y>441</y>
+      <w>117</w>
+      <h>297</h>
+    </coordinates>
+    <panel_attributes>文件区（外存）
+离散分配
+--
+
+
+--
+程序A
+--
+1
+--
+2
+--
+3
+--
+4
+--
+5
+--
+6
+--
+7
+--
+...
+--
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>198</x>
+      <y>558</y>
+      <w>297</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+1.程序及相关数据</panel_attributes>
+    <additional_attributes>310.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>198</x>
+      <y>603</y>
+      <w>297</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+程序及相关数据</panel_attributes>
+    <additional_attributes>310.0;10.0;10.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>198</x>
+      <y>657</y>
+      <w>297</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+程序及相关数据</panel_attributes>
+    <additional_attributes>10.0;280.0;310.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>531</y>
+      <w>99</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=)-
+一个页
+</panel_attributes>
+    <additional_attributes>80.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>351</x>
+      <y>414</y>
+      <w>90</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>请求分页存储</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1125</x>
+      <y>351</y>
+      <w>288</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>CPU</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>333</x>
+      <y>918</y>
+      <w>639</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>详细说明
+1. 程序首次调入内存，采用预调页策略</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>1242</x>
+      <y>459</y>
+      <w>54</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>PC</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>1242</x>
+      <y>369</y>
+      <w>54</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>IR</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>891</x>
+      <y>468</y>
+      <w>54</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>页号</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>945</x>
+      <y>468</y>
+      <w>90</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>页内偏移</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1026</x>
+      <y>459</y>
+      <w>234</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+2.由PC给出逻辑地址</panel_attributes>
+    <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>711</x>
+      <y>414</y>
+      <w>117</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>页表寄存器
+--
+页表始址
+--
+页表长度</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1206</x>
+      <y>549</y>
+      <w>126</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>高速缓存
+--
+
+
+--
+程序A的快表
+--
+页号，物理块号
+状态位P，访问字段A
+修改位M，外存地址
+--
+.........
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>918</x>
+      <y>486</y>
+      <w>306</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+3.查询快表</panel_attributes>
+    <additional_attributes>320.0;160.0;10.0;160.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>756</x>
+      <y>171</y>
+      <w>108</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>外存（磁盘）
+--
+作业1
+作业2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>864</x>
+      <y>180</y>
+      <w>153</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+选择一个作业</panel_attributes>
+    <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>1017</x>
+      <y>171</y>
+      <w>108</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>内存</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>747</x>
+      <y>0</y>
+      <w>171</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>内存
+--
+
+就绪队列
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>792</x>
+      <y>54</y>
+      <w>18</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>810</x>
+      <y>54</y>
+      <w>18</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>828</x>
+      <y>54</y>
+      <w>18</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>846</x>
+      <y>54</y>
+      <w>18</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>918</x>
+      <y>45</y>
+      <w>153</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+选择一个进程</panel_attributes>
+    <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1071</x>
+      <y>27</y>
+      <w>90</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>CPU</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
